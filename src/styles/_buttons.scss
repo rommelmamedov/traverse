@@ -1,0 +1,35 @@
+button,
+.button {
+  --button-font-size: var(--px18);
+  --button-padding-y: 1.112em; //20px
+  --button-padding-x: 1.112em;//20px
+  --button-radius: 0.222em; //4px
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding-y) var(--button-padding-x);
+  background-color: var(--blue);
+  border-radius: var(--button-radius);
+  border: 1px solid var(--blue);
+  color: white;
+  font-size: var(--button-font-size);
+  transition: all 0.25s;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+    transform: translateY(-0.2em);
+
+  }
+
+  &[data-size="sm"] {
+    --button-font-size: var(--px14);
+    --button-padding-y: 0.714em; //10px
+    --button-padding-x: 1.912em;//26.77px
+    --button-radius: 0.285em; //4px
+  }
+}

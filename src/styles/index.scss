@@ -1,5 +1,6 @@
 @use "_normalize.css";
 @use "variables";
+@use "buttons";
 
 *,
 *:before,
@@ -70,6 +71,33 @@ h6, .h6 {
   }
 }
 
+a {
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
 p {
   margin-bottom: 1em;
 }
+
+//LAYOUT
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+//HELPERS
+.listUnstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.text24 {
+  font-size: var(--px24);
+}
+
+.text18 {
+  font-size: var(--px18);
+}
+

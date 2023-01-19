@@ -1,0 +1,46 @@
+.homePage {
+  :global {
+    .sectionHomeHeader {
+      display: flex;
+      align-items: center;
+      height: auto;
+      min-height: 100vh;
+      max-height: 67.5em; //1080px
+      padding: 0 var(--px20);
+      background-image: url("../assets/images/home-header.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right center;
+    }
+
+    .sectionHomeHeaderWrapper {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .sectionHomeHeaderTextWrapper {
+      flex: 0 0 60%;
+    }
+
+    .sectionHeading {
+      width: 100%;
+      max-width: 50%;
+      padding-bottom: 60px;
+      line-height: 22px;
+    }
+
+    .sectionSubtitle {
+      margin-bottom: 60px; //60px
+    }
+
+    .sectionLink {
+      color: var(--blue);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-shadow: 0 0 20px var(--blue), 0 0 30px #ffffff;
+      }
+    }
+  }
+}

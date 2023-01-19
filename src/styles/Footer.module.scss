@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--px80);
+  width: 100%;
+  padding: 0 var(--px20);
+  background-color: black;
+  border-top: 1px solid var(--glass-white-2);
+
+  :global {
+    .footerLeftWrapper {
+      display: flex;
+      align-items: center;
+
+      >* {
+        color: rgba(255,255,255,0.5);
+        font-size: 1em;
+      }
+
+      .staticPagesList {
+        display: inline-flex;
+        align-items: center;
+        column-gap: var(--px40);
+      }
+    }
+  }
+}
