@@ -1,0 +1,31 @@
+:root {
+  --blue: #005CFF;
+  --orange: #FF5F06;
+  --light-grey: #D7D7D7;
+
+  --glass-white-8: rgba(255,255,255,0.08);
+  --glass-white-2: rgba(255,255,255,0.2);
+
+  --body-font-size: 16px;
+  --body-bg-color: #000000;
+  --body-font-color: #ffffff;
+  --body-font: "Avantt TRIAL", sans-serif;
+
+  //MEASUREMENTS
+  --px20: 1.25em;
+  --px24: 1.5em;
+  --px40: 2.5em;
+  --px42: 2.625em;
+  --px62: 3.875em;
+
+
+  //CONTAINERS
+  --container-lg: calc(100% - var(--px40));
+  --container: 82.5em; //1320px
+}
+
+@media (max-width: 991.98px) {
+  :root{
+    --body-font-size: 14px;
+  }
+}

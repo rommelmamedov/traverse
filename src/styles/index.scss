@@ -1,0 +1,75 @@
+@use "_normalize.css";
+@use "variables";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: var(--body-bg-color);
+  color: var(--body-font-color);
+  font-size: var(--body-font-size);
+  font-family: var(--body-font);
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.bodyIsOpen {
+    overflow: hidden;
+  }
+}
+
+//TYPOGRAPHY
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+h1, .h1 {
+  font-size: var(--px62);
+  line-height: 1.08; //67px
+}
+
+h2, .h2 {
+  font-size: var(--px42);
+  line-height: 1.07; //45px
+}
+
+h3, .h3 {
+  font-size: var(--px24);
+  line-height: 1.167; //28px
+}
+
+h4, .h4 {
+  font-size: var(--px20);
+}
+
+h5, .h5 {
+  font-size: var(--px18);
+}
+
+h6, .h6 {
+  font-size: 1em;
+}
+
+@media (max-width: 991px) {
+  h1, .h1 {
+    font-size: var(--px36);
+  }
+
+  h2, .h2 {
+    font-size: var(--px30);
+  }
+}
+
+p {
+  margin-bottom: 1em;
+}
