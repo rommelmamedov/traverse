@@ -23,6 +23,7 @@ function Header({extraClass}) {
               <NavLink
                 to={item.url}
                 title={item.title}
+                tabIndex={idx}
                 className={({isActive}) => clsx("navLink", isActive && "active")}
               >
                 {item.title}

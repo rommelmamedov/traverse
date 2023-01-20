@@ -81,6 +81,7 @@ p {
 }
 
 //LAYOUT
+
 .container {
   width: 100%;
   max-width: var(--container);
@@ -88,6 +89,14 @@ p {
 }
 
 //HELPERS
+
+svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
 .listUnstyled {
   list-style: none;
   padding-left: 0;

@@ -1,0 +1,110 @@
+.homePageTabs {
+  background-image: url("../assets/images/home-features-bg.webp");
+  background-repeat: no-repeat;
+
+  :global {
+    .customTabs {
+      &.tabNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--px80);
+        list-style: none;
+
+        li:first-child .tabButton {
+          border-radius: 4px 0 0 4px;
+        }
+
+        li:last-child .tabButton {
+          border-radius: 0 4px 4px 0;
+        }
+
+        .tabButton {
+          background-color: var(--glass-white-2);
+          border-color: var(--glass-white-2);
+          border-radius: 0;
+          color: rgba(255,255,255,0.6);
+
+          &:hover,
+          &:focus {
+            box-shadow: 0 0 5px white;
+            color: white;
+            transform: none;
+          }
+
+          &.active {
+            background-color: var(--blue);
+            border-color: var(--blue);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .sectionFeatures {
+      margin-bottom: var(--px160);
+    }
+
+    .sectionFeaturesTitle {
+      width: 100%;
+      max-width: 21em; //874px
+      margin: 0 auto 80px;
+      text-align: center;
+    }
+
+    .featureCards {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1em;
+      list-style: none;
+      padding-left: 0;
+
+      .featureCardsItem {
+        width: 100%;
+        flex: 0 0 calc(100% / 4 - 3em / 4);
+
+        &:nth-child(n+5) {
+          flex-grow: 1;
+          flex-basis: calc(50% - 0.5em);
+        }
+
+        &:nth-child(n+6) {
+          flex: 0 0 calc(50% - 0.5em);
+        }
+      }
+
+      .featureCard {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 25px 30px;
+        background-color: var(--glass-white-8);
+        border-radius: 1em;
+        backdrop-filter: blur(var(--px40));
+
+        .featureCardTitle {
+          font-weight: 500;
+        }
+
+        .featureCardDescription {
+          line-height: var(--px20);
+          padding-bottom: 46px;
+        }
+
+        .featureCardFooter {
+          margin-top: auto;
+        }
+
+        .featureCardIconWrapper {
+          display: flex;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
