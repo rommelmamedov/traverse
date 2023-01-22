@@ -44,6 +44,10 @@
       }
     }
 
+    .homePageSectionSignUp {
+      margin-bottom: var(--px160);
+    }
+
     @media (max-width: 991.98px) {
       .homePageSectionHeader {
         display: flex;
