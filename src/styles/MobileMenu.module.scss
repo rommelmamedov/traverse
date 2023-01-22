@@ -12,12 +12,13 @@
     border-color: white;
     border-radius: var(--px4);
     font-size: 1em;
-    color: black;
+    overflow: hidden;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: var(--blue);
       border-color: var(--blue);
-      transform: none;
+      box-shadow: none;
 
       .menuIcon {
         background-color: white;
@@ -29,17 +30,10 @@
       }
     }
 
-    &:hover {
-      box-shadow: none;
-    }
-
-    &:focus {
-      box-shadow: 0 0 10px rgba(255,255,255,0.3);
-    }
-
     &.isOpen {
       background-color: var(--blue);
       border-color: var(--blue);
+      color: white;
 
       .menuIcon {
         background-color: transparent;
@@ -65,10 +59,11 @@
     justify-content: center;
     width: 1em;
     height: 1em;
+    color: inherit;
 
     .menuIcon {
       display: block;
-      width: 14px;
+      width: 1em;
       height: 1px;
       background-color: black;
       transition: all 0.3s ease;
@@ -81,7 +76,7 @@
         right: 0;
         z-index: 1;
         display: block;
-        width: 14px;
+        width: 1em;
         height: 1px;
         margin: 0 auto;
         background-color: black;
@@ -105,27 +100,32 @@
     z-index: -1;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: var(--header-height) 0 var(--px40);
     background-color: var(--light-grey);
-    overflow-y: auto;
+    overflow: hidden;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 
     &.isOpen {
       transform: translateY(0);
-
-      .mobileMenuInner {
-        opacity: 1;
-      }
     }
   }
 
   .mobileMenuInner {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 100vh;
-    padding: var(--header-height) 0 3em;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    overflow-y: auto;
+
+    >.navItems {
+      flex-grow: 1;
+    }
+  }
+
+  .mobileMenuFooter {
+    margin-top: auto;
+    padding: var(--px80) var(--px20)  var(--px40);
   }
 }

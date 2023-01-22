@@ -24,11 +24,11 @@
         list-style: none;
 
         li:first-child .tabButton {
-          border-radius: 4px 0 0 4px;
+          border-radius: 0.222em 0 0 0.222em;
         }
 
         li:last-child .tabButton {
-          border-radius: 0 4px 4px 0;
+          border-radius: 0 0.222em 0.222em 0;
         }
 
         .tabButton {
@@ -36,18 +36,28 @@
           border-color: var(--glass-white-2);
           border-radius: 0;
           color: rgba(255, 255, 255, 0.6);
+          overflow: hidden;
 
           &:hover,
           &:focus {
-            box-shadow: 0 0 5px white;
-            color: white;
-            transform: none;
+            background-color: white;
+            border-color: white;
+            box-shadow: var(--glow-box-shadow-soft-white);
+            color: black;
           }
 
           &.active {
             background-color: var(--blue);
             border-color: var(--blue);
             color: white;
+
+            &:hover,
+            &:focus {
+              background-color: var(-blue);
+              box-shadow: var(--glow-box-shadow-blue);
+              text-shadow: none;
+              color: white;
+            }
           }
         }
       }
@@ -136,7 +146,7 @@
     @media (max-width: 991.98px) {
       .sectionTab {
         background-image: url("../assets/images/home-features-bg-mobile.webp");
-        background-position: left 22%;
+        background-position: left 37%;
       }
 
       .customTabs {
@@ -150,11 +160,11 @@
             width: 100%;
 
             &:first-child .tabButton {
-              border-radius: var(--px4) 0 0 var(--px4);
+              border-radius: var(--px4) var(--px4) 0 0;
             }
 
             &:last-child .tabButton {
-              border-radius: 0 var(--px4) var(--px4) 0;
+              border-radius: 0 0 var(--px4) var(--px4);
             }
           }
 
@@ -170,7 +180,7 @@
 
       .sectionFeaturesTitle {
         max-width: 100%;
-        margin: 0 auto 40px;
+        margin: 0 auto 1.81em; //22px
       }
 
       .featureCards {
@@ -194,7 +204,7 @@
 
           .featureCardDescription {
             line-height: var(--px20);
-            padding-bottom: 46px;
+            padding-bottom: 3.285em; //46px
           }
 
           .featureCardFooter {
@@ -202,16 +212,14 @@
           }
 
           .featureCardIconWrapper {
-            display: flex;
-            align-items: center;
-            width: 50px;
-            height: 50px;
+            width: var(--px40);
+            height: var(--px40);
           }
         }
       }
 
       .sectionFaqsTitle {
-        margin-bottom: 40px; //40px
+        margin-bottom: 1.81em; //40px
       }
     }
 

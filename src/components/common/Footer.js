@@ -1,52 +1,38 @@
 import React from 'react';
 import clsx from "clsx";
+import {useIsMobileBreakpoint} from "../../hooks/useIsMobileBreakpoint";
+import FooterSocialLinks from "./FooterSocialLinks";
+import FooterLinks from "./FooterLinks";
 import landingFooterBg from "../../assets/images/footer-landing-page-bg.webp";
-import { BsMedium } from "react-icons/bs";
-import { FaTelegramPlane, FaDiscord, FaTwitter } from "react-icons/fa";
+import landingFooterBgMobile from "../../assets/images/footer-landing-page-bg-mobile.webp";
 import styles from '../../styles/Footer.module.scss';
 
-const footerSocialLinks = [
-  {name: "Medium", url: "", icon:<BsMedium/>},
-  {name: "Telegram", url: "", icon: <FaTelegramPlane/>},
-  {name: "Discord", url: "", icon: <FaDiscord/>},
-  {name: "Twitter", url: "", icon: <FaTwitter/>}
-]
-
 function Footer({isLandingPageFooter}) {
+
+  const isMobileBreakpoint = useIsMobileBreakpoint();
+
   return (
     <footer className={clsx(styles.footer, "footer", isLandingPageFooter && styles.footerLandingPage)}>
 
       {isLandingPageFooter &&
-        <img className="footerLandingPageBg" src={landingFooterBg} alt="Footer background"/>
+      <>
+        {isMobileBreakpoint? (
+          <img className="footerLandingPageBg" src={landingFooterBgMobile} alt="Footer background"/>
+        ): (
+          <img className="footerLandingPageBg" src={landingFooterBg} alt="Footer background"/>
+        )}
+      </>
       }
 
       <section className="sectionFooter">
 
-        <div className="footerLeftWrapper">
-          <span>©2022 Traverse Labs Inc.</span>
+        <span className="footerCopyright">
+          ©2022 Traverse Labs Inc.
+        </span>
 
-          <ul className="staticPagesList listUnstyled">
-            <li>Privacy</li>
-            <li>Terms</li>
-          </ul>
-        </div>
+        <FooterLinks/>
 
-        <div className="footerRightWrapper">
-          <ul className="socialLinksList listUnstyled">
-            {footerSocialLinks.map((link, idx) => (
-              <li key={idx}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  title={link.name}
-                >
-                  {link.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <FooterSocialLinks/>
 
       </section>
 

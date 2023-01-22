@@ -29,7 +29,7 @@ function Button(
           data-color={variantColor}
           title={text? text : title}
         >
-           {text ? <span className="text">text</span> : children}
+           {text ? <span className="text">{text}</span> : children}
 
         </Link>
       ):(

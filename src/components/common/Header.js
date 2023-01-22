@@ -25,11 +25,14 @@ function Header({extraClass}) {
         {isMobileBreakpoint? (
           <MobileMenu>
             <NavItems extraClass="navItems mobile" navItemList={navItemsUnlaunched}/>
-            <Button
-              extraClass="navButton mobile"
-              text="Launch the app"
-              variantSize="sm"
-            />
+
+            <div className="mobileMenuFooter">
+              <Button
+                extraClass="navButton mobile"
+                text="Launch the app"
+                variantSize="sm"
+              />
+            </div>
           </MobileMenu>
         ):(
           <>

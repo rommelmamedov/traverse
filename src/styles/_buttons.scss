@@ -8,16 +8,16 @@ button,
   --button-border-color: var(--blue);
   --button-color: white;
   --button-font-size: var(--px18);
-  --button-hover-bg-color: rgba(255,255,255,0.2);
-  --button-hover-border-color: rgba(255,255,255,0.8);
-  --button-hover-box-shadow: 0 0 1.111em white; //0 0 20px
-  --button-hover-color: white;
+  --button-hover-bg-color: var(--button-bg-color);
+  --button-hover-border-color: var(--button-border-color);
+  --button-hover-box-shadow: var(--glow-box-shadow-blue);
+  --button-hover-color: var(--button-color);
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: auto;
-  height: var(--button-min-height);
+  min-height: var(--button-min-height);
   padding: var(--button-padding-y) var(--button-padding-x);
   background-color: var(--button-bg-color);
   border-radius: var(--button-radius);
@@ -27,6 +27,7 @@ button,
   color: var(--button-color);
   font-size: var(--button-font-size);
   line-height: normal;
+  text-decoration: none;
   backdrop-filter: blur(5px);//5px
   transition: all 0.25s;
   cursor: pointer;
@@ -37,7 +38,6 @@ button,
     border-color: var(--button-hover-border-color);
     box-shadow: var(--button-hover-box-shadow);
     color: var(--button-hover-color);
-    animation: glow 1.4s linear infinite;
   }
 
   &:focus {
@@ -49,7 +49,6 @@ button,
     --button-padding-y: 0.714em; //10px
     --button-padding-x: 1.912em;//26.77px
     --button-radius: 0.285em; //4px
-    --button-hover-box-shadow: 0 0 1.428em white; //0 0 20px
     --button-font-size: var(--px14);
   }
 
@@ -57,6 +56,7 @@ button,
     --button-bg-color: white;
     --button-border-color: white;
     --button-color: black;
+    --button-hover-box-shadow: var(--glow-box-shadow-white);
   }
 
   @media (max-width: 991.98px) {

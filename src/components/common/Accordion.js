@@ -11,41 +11,47 @@ function Accordion({extraClass, list }) {
   const handleAccordionOpen = (index) => {
     if (index === accordionOpen) {
       setAccordionOpen(-1);
+    } else {
+      setAccordionOpen(index);
     }
-    setAccordionOpen(index);
   };
 
   return (
     <ul className={clsx(styles.accordion, "accordion", extraClass && extraClass)}>
 
       {list && list?.map((item, idx) => {
-       const ItemContent = DOMPurify.sanitize(item.content);
+        const ItemContent = DOMPurify.sanitize(item.content);
 
         return (
-        <li className="accordionItem" key={idx}>
+          <li className="accordionItem" key={idx}>
 
-          <Button extraClass={clsx("accordionToggle", accordionOpen === idx && "isOpen")}
-                  onClick={() => handleAccordionOpen(idx)}>
+            <Button
+              extraClass={clsx("accordionToggle", accordionOpen === idx && "isOpen")}
+              aria-expanded={accordionOpen === idx}
+              aria-controls={`${item.title}`}
+              aria-disabled={accordionOpen === idx}
+              onClick={(e) => handleAccordionOpen(idx)}
+            >
 
-            <span className="accordionToggleText">
-              {item.title}
-            </span>
+              <span className="accordionToggleText">
+                {item.title}
+              </span>
 
-            <span className="accordionToggleIcon">
-              <IcnAccordion/>
-            </span>
+              <span className="accordionToggleIcon">
+                <IcnAccordion/>
+              </span>
 
-          </Button>
+            </Button>
 
-          <div className={clsx("accordionContent", accordionOpen === idx && "isOpen")}>
+            <div className={clsx("accordionContent", accordionOpen === idx && "isOpen")}>
 
-            <div className="accordionContentWrapper">
-               <div dangerouslySetInnerHTML={{ __html: ItemContent }}/>
+              <div className="accordionContentWrapper">
+                <div dangerouslySetInnerHTML={{ __html: ItemContent }}/>
+              </div>
+
             </div>
 
-          </div>
-
-        </li>
+          </li>
         )
       })}
 

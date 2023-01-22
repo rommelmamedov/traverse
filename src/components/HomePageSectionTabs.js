@@ -24,7 +24,7 @@ function HomePageSectionTabs() {
           {homeTabs.map((item, idx) => (
             <li key={idx}>
               <Button
-                extraClass={clsx('tabButton', item.content === null ? 'disabled' : checkActive(idx, 'active'))}
+                extraClass={clsx("tabButton", item.content === null ? 'disabled' : checkActive(idx, 'active'))}
                 onClick={() => handleClick(idx)}
                 text={item.buttonTitle}
               />

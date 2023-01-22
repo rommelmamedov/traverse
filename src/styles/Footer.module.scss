@@ -3,6 +3,9 @@
 
   &.footerLandingPage {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
     :global {
       .sectionFooter {
@@ -10,10 +13,12 @@
         bottom: 0;
         left: 0;
       }
+
       .footerLandingPageBg {
         width: 100%;
         max-width: 100%;
         height: auto;
+        object-fit: cover;
       }
     }
   }
@@ -22,44 +27,78 @@
     .sectionFooter {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       width: 100%;
       height: var(--px80);
       padding: 0 var(--px20);
+      column-gap: 1em;
       border-top: 1px solid var(--glass-white-2);
     }
 
-    .footerLeftWrapper {
-      display: flex;
+    .footerCopyright {
+      flex-shrink: 1;
+      flex-basis: 19.9375em; //319px
+      color: rgba(255,255,255,0.5);
+      font-size: 1em;
+    }
+
+    .footerLinksList {
+      display: inline-flex;
       align-items: center;
+      column-gap: var(--px40);
+      color: rgba(255,255,255,0.5);
+      font-size: 1em;
 
-      >* {
-        color: rgba(255,255,255,0.5);
-        font-size: 1em;
-      }
+      a {
+        text-decoration: none;
 
-      .staticPagesList {
-        display: inline-flex;
-        align-items: center;
-        column-gap: var(--px40);
+        &.disabled {
+          pointer-events: none;
+        }
       }
     }
 
-    .socialLinksList {
+    .footerSocialLinksList {
       display: inline-flex;
       align-items: center;
       column-gap: var(--px14);
+      margin-left: auto;
 
       a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 38px;
-        height: 38px;
-        padding: 7px;
+        width: 2.375em; //38px
+        height: 2.375em;
+        padding: 0.4375em; //7px
         background-color: var(--blue);
         border: 1px solid var(--blue);
-        border-radius: 4px;
+        border-radius: var(--px4);
+
+        &:hover,
+        &:focus {
+          box-shadow: var(--glow-box-shadow-blue);
+        }
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .sectionFooter {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 0;
+        row-gap: var(--px20);
+        padding: var(--px20);
+      }
+
+      .footerCopyright {
+        flex: unset;
+        order: 3;
+      }
+
+      .footerSocialLinksList {
+        margin-left: unset;
       }
     }
   }
