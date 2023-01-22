@@ -35,7 +35,7 @@ function MobileMenu({extraClass, children}) {
     >
 
       <Button
-        extraClass={clsx("mobileMenuButton", openMobileMenu && "isOpen")}
+        extraClass={clsx("mobileMenuToggle", openMobileMenu && "isOpen")}
         title="Menu"
         onClick={handleToggleMobileMenu}
       >

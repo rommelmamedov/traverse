@@ -4,8 +4,9 @@
   width: 100%;
   height: var(--header-height);
   padding: 0 var(--px20);
-  background-color: black;
+  background-color: rgba(0,0,0,0.4);
   border-bottom: 1px solid var(--glass-white-2);
+  backdrop-filter: blur(var(--px10));
 }
 
 :global {

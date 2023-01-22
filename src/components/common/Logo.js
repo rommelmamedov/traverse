@@ -24,7 +24,7 @@ function Logo({extraClass}) {
           </span>
         </span>
       ):(
-        <img src={LogoLight} alt="Traverse Logo"/>
+        <img className="navLogoImage" src={LogoLight} alt="Traverse Logo"/>
       )}
     </Link>
   )

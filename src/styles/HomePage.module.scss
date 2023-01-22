@@ -1,6 +1,6 @@
 .homePage {
   :global {
-    .sectionHomeHeader {
+    .homePageSectionHeader {
       display: flex;
       align-items: center;
       height: auto;
@@ -13,24 +13,26 @@
       background-position: right center;
     }
 
-    .sectionHomeHeaderWrapper {
+    .homePageSectionHeaderWrapper {
       display: flex;
       align-items: flex-start;
     }
 
-    .sectionHomeHeaderTextWrapper {
+    .homePageSectionHeaderTextWrapper {
       flex: 0 0 60%;
     }
 
     .sectionHeading {
       width: 100%;
       max-width: 50%;
-      padding-bottom: 60px;
-      line-height: 22px;
+      margin-bottom: 3.335em;//60px
+      font-size: var(--px18);
+      line-height: 1.22; //22px;
     }
 
     .sectionSubtitle {
-      margin-bottom: 60px; //60px
+      font-size: var(--px24);
+      margin-bottom: 2.5em; //60px
     }
 
     .sectionLink {
@@ -39,7 +41,63 @@
 
       &:hover {
         text-decoration: underline;
-        text-shadow: 0 0 20px var(--blue), 0 0 30px #ffffff;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .homePageSectionHeader {
+        display: flex;
+        flex-direction: column;
+        padding-top: calc(var(--header-height) + var(--px30));
+        background-image: none;
+
+        >.container {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .homePageSectionHeaderWrapper {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .homePageSectionHeaderTextWrapper {
+        flex: unset;
+        width: 100%;
+
+        .sectionHeading {
+          max-width: 269px; //269px
+          margin-bottom: var(--px26);
+          font-size: 1em;
+        }
+
+        h1 {
+          margin-bottom: 26px;
+        }
+
+        .sectionSubtitle {
+          font-size: 16px;
+          margin-bottom: 26px;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+
+      .homePageSectionHeaderMobileImage {
+        width: 100%;
+        max-width: 100%;
+        margin-top: auto;
+
+        img{
+          width: 100%;
+          max-width: 100%;
+          height:  auto;
+        }
       }
     }
   }

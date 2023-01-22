@@ -1,14 +1,26 @@
 .homePageTabs {
-  background-image: url("../assets/images/home-features-bg.webp");
-  background-repeat: no-repeat;
+  margin-bottom: 9.375em; //150px
+
+  @media (max-width: 991.98px) {
+    margin-bottom: var(--px80);
+  }
 
   :global {
+    .sectionTab {
+      padding: 0 var(--px20);
+      background-image: url("../assets/images/home-features-bg.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left top;
+    }
+
     .customTabs {
       &.tabNav {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: var(--px80);
+        padding: 0 var(--px20);
+        margin: 0 0 var(--px80);
         list-style: none;
 
         li:first-child .tabButton {
@@ -23,7 +35,7 @@
           background-color: var(--glass-white-2);
           border-color: var(--glass-white-2);
           border-radius: 0;
-          color: rgba(255,255,255,0.6);
+          color: rgba(255, 255, 255, 0.6);
 
           &:hover,
           &:focus {
@@ -39,6 +51,15 @@
           }
         }
       }
+
+      &.tabPanel .panel {
+        opacity: 0;
+        transition: opacity 1s ease;
+
+        &.active {
+          opacity: 1;
+        }
+      }
     }
 
     .sectionFeatures {
@@ -47,8 +68,8 @@
 
     .sectionFeaturesTitle {
       width: 100%;
-      max-width: 21em; //874px
-      margin: 0 auto 80px;
+      max-width: 22.3em; //874px
+      margin: 0 auto 1.904em; //0 auto 80px
       text-align: center;
     }
 
@@ -57,21 +78,21 @@
       align-items: stretch;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: var(--px20);
       list-style: none;
       padding-left: 0;
 
       .featureCardsItem {
         width: 100%;
-        flex: 0 0 calc(100% / 4 - 3em / 4);
+        flex: 0 0 calc(100% / 4 - var(--px20) * 3 / 4);
 
         &:nth-child(n+5) {
           flex-grow: 1;
-          flex-basis: calc(50% - 0.5em);
+          flex-basis: calc(50% - var(--px20) / 2);
         }
 
         &:nth-child(n+6) {
-          flex: 0 0 calc(50% - 0.5em);
+          flex: 0 0 calc(50% - var(--px20) / 2);
         }
       }
 
@@ -80,7 +101,7 @@
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 25px 30px;
+        padding: var(--px25) var(--px30);
         background-color: var(--glass-white-8);
         border-radius: 1em;
         backdrop-filter: blur(var(--px40));
@@ -91,7 +112,7 @@
 
         .featureCardDescription {
           line-height: var(--px20);
-          padding-bottom: 46px;
+          padding-bottom: 2.875em; //46px
         }
 
         .featureCardFooter {
@@ -101,8 +122,112 @@
         .featureCardIconWrapper {
           display: flex;
           align-items: center;
-          width: 50px;
-          height: 50px;
+          width: var(--px50);
+          height: var(--px50);
+        }
+      }
+    }
+
+    .sectionFaqsTitle {
+      text-align: center;
+      margin-bottom: 1.904em; //80px
+    }
+
+    @media (max-width: 991.98px) {
+      .sectionTab {
+        background-image: url("../assets/images/home-features-bg-mobile.webp");
+        background-position: left 22%;
+      }
+
+      .customTabs {
+        &.tabNav {
+          flex-direction: column;
+          width: 100%;
+          margin-bottom: var(--px40);
+          font-size: 1em;
+
+          li {
+            width: 100%;
+
+            &:first-child .tabButton {
+              border-radius: var(--px4) 0 0 var(--px4);
+            }
+
+            &:last-child .tabButton {
+              border-radius: 0 var(--px4) var(--px4) 0;
+            }
+          }
+
+          .tabButton {
+            width: 100%;
+          }
+        }
+      }
+
+      .sectionFeatures {
+        margin-bottom: var(--px40);
+      }
+
+      .sectionFeaturesTitle {
+        max-width: 100%;
+        margin: 0 auto 40px;
+      }
+
+      .featureCards {
+        .featureCardsItem {
+          flex: 0 0 calc(50% - var(--px20) / 2);
+
+          &:nth-child(n+5) {
+            flex-grow: 1;
+            flex-basis: calc(50% - var(--px20) / 2);
+          }
+
+          &:nth-child(n+6) {
+            flex: 0 0 calc(50% - var(--px20) / 2);
+          }
+        }
+
+        .featureCard {
+          padding: var(--px20);
+          border-radius: var(--px16);
+          backdrop-filter: blur(var(--px10));
+
+          .featureCardDescription {
+            line-height: var(--px20);
+            padding-bottom: 46px;
+          }
+
+          .featureCardFooter {
+            margin-top: auto;
+          }
+
+          .featureCardIconWrapper {
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .sectionFaqsTitle {
+        margin-bottom: 40px; //40px
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .featureCards {
+        .featureCardsItem {
+          flex: 0 0 100%;
+
+          &:nth-child(n+5) {
+            flex-grow: unset;
+            flex-basis: 100%;
+          }
+
+          &:nth-child(n+6) {
+            flex: 100%;
+          }
         }
       }
     }

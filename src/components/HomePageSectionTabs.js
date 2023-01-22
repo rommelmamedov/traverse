@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import clsx from "clsx";
 import Button from "./common/Button";
 import HomepageTabWalletManagement from "./HomePageTabWalletManagement";
+import HomePageTabBusinessSolutions from "./HomePageTabBusinessSolutions";
 import styles from '../styles/HomePageSectionTabs.module.scss';
 
 const homeTabs = [
   {buttonTitle: "Wallet Management", content: <HomepageTabWalletManagement/> },
-  {buttonTitle: "Business Solutions", content: "" },
+  {buttonTitle: "Business Solutions", content: <HomePageTabBusinessSolutions/> },
 ]
 
 function HomePageSectionTabs() {
@@ -34,11 +35,13 @@ function HomePageSectionTabs() {
       </div>
 
       <div className="customTabs tabPanel">
-        {homeTabs.map((item, idx) => (
-          <div key={idx} className={`panel ${checkActive(idx, 'active')}`}>
-            {item.content}
-          </div>
-        ))}
+        {homeTabs.map((item, idx) => {
+          if (activeIndex === idx) {
+            return <div key={idx} className={`panel ${checkActive(idx, 'active')}`}>{item.content}</div>
+          } else {
+            return null;
+          }
+        })}
       </div>
 
     </section>

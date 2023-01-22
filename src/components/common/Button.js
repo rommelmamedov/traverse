@@ -10,6 +10,7 @@ function Button(
     type,
     onClick,
     variantSize,
+    variantColor,
     text,
     title,
     children,
@@ -25,6 +26,7 @@ function Button(
           tabIndex="-1"
           className={clsx("button", extraClass && extraClass)}
           data-size={variantSize}
+          data-color={variantColor}
           title={text? text : title}
         >
            {text ? <span className="text">text</span> : children}
@@ -34,6 +36,7 @@ function Button(
         <button
           className={clsx("button", extraClass && extraClass, disabled && "isDisabled")}
           data-size={variantSize}
+          data-color={variantColor}
           title={text? text : title}
           type={type? type : "button"}
           onClick={onClick}

@@ -1,29 +1,51 @@
 import React from 'react';
 import clsx from "clsx";
+import {useIsMobileBreakpoint} from "../hooks/useIsMobileBreakpoint";
 import PageLayout from "../layouts/pageLayout";
 import Button from "../components/common/Button";
-import styles from "../styles/HomePage.module.scss";
 import HomePageSectionTabs from "../components/HomePageSectionTabs";
+import SectionHomeMobileImage from "../assets/images/home-header-mobile.webp";
+import styles from "../styles/HomePage.module.scss";
+import SectionSignUp from "../components/SectionSignUp";
 
 function HomePage() {
-	return (
-		<PageLayout pageTitle="Home" pageClass={clsx(styles.homePage, "homePage")}>
+	const isMobileBreakpoint = useIsMobileBreakpoint();
 
-			<section className="sectionHomeHeader">
+	return (
+		<PageLayout
+			pageTitle="Home"
+			pageClass={clsx(styles.homePage, "homePage")}
+			isLandingPageFooter
+		>
+
+			<section className="homePageSectionHeader">
 
 				<div className="container">
 
-					<div className="sectionHomeHeaderWrapper">
+					<div className="homePageSectionHeaderWrapper">
 
-						<div className="sectionHomeHeaderTextWrapper">
-                <p className="sectionHeading text18">The securest way to manage your portfolio on one platform </p>
-								<h1>Explore the blockchain with your mind at ease</h1>
-								<p className="sectionSubtitle text24">
-									We have a live demo. <a href="www.google.com" target="_blank" className="sectionLink">Check it out</a>
-								</p>
+						<div className="homePageSectionHeaderTextWrapper">
+							<p className="sectionHeading">
+								The securest way to manage your portfolio on one platform
+							</p>
 
-								<Button text="Launch the App"/>
-							</div>
+							<h1>
+								Explore the blockchain with your mind at ease
+							</h1>
+
+							<p className="sectionSubtitle">
+								We have a live demo. <a href="www.google.com" target="_blank" className="sectionLink">Check it out</a>
+							</p>
+
+							<Button text="Launch the App"/>
+
+						</div>
+
+						{isMobileBreakpoint &&
+						<div className="homePageSectionHeaderMobileImage">
+							<img src={SectionHomeMobileImage} alt="Header background"/>
+						</div>
+						}
 
 					</div>
 
@@ -32,6 +54,8 @@ function HomePage() {
 			</section>
 
 			<HomePageSectionTabs/>
+
+			<SectionSignUp extraClass="homePageSectionSignUp" isOrange/>
 
 		</PageLayout>
 	);

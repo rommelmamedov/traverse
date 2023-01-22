@@ -1,0 +1,54 @@
+.sectionSignUp {
+  padding-left: var(--px20);
+  padding-right: var(--px20);
+
+  :global {
+    .sectionSignUpFormWrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 7.875em var(--px20);
+      background-color: var(--blue);
+      border-radius: 1em;
+      overflow: hidden;
+
+      &.isOrange {
+        background-color: var(--orange);
+      }
+
+      .sectionSignUpFormInner {
+        width: 100%;
+        max-width: 56em; //896px
+        margin: 0 auto;
+
+        .sectionSignUpFormTitle,
+        .sectionSignUpFormSubtitle {
+          text-align: center;
+        }
+
+        .sectionSignUpFormSubtitle {
+          margin-bottom: 3.335em; //60px
+          font-size: var(--px18);
+        }
+      }
+
+      .formInline {
+        max-width: 47.8125em; //765px
+        margin: 0 auto;
+      }
+
+      .sectionSignUpFormBgOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+}

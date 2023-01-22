@@ -1,14 +1,34 @@
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--px80);
   width: 100%;
-  padding: 0 var(--px20);
-  background-color: black;
-  border-top: 1px solid var(--glass-white-2);
+
+  &.footerLandingPage {
+    position: relative;
+
+    :global {
+      .sectionFooter {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .footerLandingPageBg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
 
   :global {
+    .sectionFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: var(--px80);
+      padding: 0 var(--px20);
+      border-top: 1px solid var(--glass-white-2);
+    }
+
     .footerLeftWrapper {
       display: flex;
       align-items: center;
@@ -22,6 +42,24 @@
         display: inline-flex;
         align-items: center;
         column-gap: var(--px40);
+      }
+    }
+
+    .socialLinksList {
+      display: inline-flex;
+      align-items: center;
+      column-gap: var(--px14);
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        padding: 7px;
+        background-color: var(--blue);
+        border: 1px solid var(--blue);
+        border-radius: 4px;
       }
     }
   }

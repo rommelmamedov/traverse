@@ -10,15 +10,20 @@
 
     .accordionItem {
       border-bottom: 1px solid var(--glass-white-2);
+
+      &:first-child {
+        border-top: 1px solid var(--glass-white-2);
+      }
     }
 
     .accordionToggle {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: unset;
       column-gap: 1em;
       width: 100%;
-      padding: 40px 0;
+      padding: var(--px40) 0;
       background-color: transparent;
       border: 0;
       text-align: left;
@@ -52,15 +57,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 1.625em;//26px
-      height: 1.625em;
+      width: var(--px26);
+      height: var(--px26);
       border: 1px solid white;
       border-radius: 100%;
       transition: all 0.3s ease;
 
       svg {
-        max-width: 0.625em;//10px
-        max-height: 0.625em;
+        max-width: var(--px10);
+        max-height:  var(--px10);
       }
     }
 
@@ -82,7 +87,37 @@
 
       p {
         font-size: var(--px18);
-        line-height: 22px;
+        line-height: 1.222em; //22px
+      }
+    }
+
+    @media (max-width: 991.98px){
+      .accordionToggle {
+        padding: var(--px20) 0;
+      }
+
+      .accordionToggleIcon {
+        width: var(--px20);
+        height: var(--px20);
+
+        svg {
+          max-width: 0.549em; //7.69px
+          max-height: 0.549em;
+        }
+      }
+
+      .accordionToggleText {
+        font-size: var(--px16);
+        transition: all 0.3s ease;
+      }
+
+      .accordionContentWrapper {
+        padding: 0 0 var(--px30);
+
+        p {
+          font-size: 1em;
+          line-height: 1.28; //18px
+        }
       }
     }
   }

@@ -6,25 +6,28 @@
   --glass-white-8: rgba(255,255,255,0.08);
   --glass-white-2: rgba(255,255,255,0.2);
 
-  --body-font-size: 16px;
+  --body-font-size: 0.833vw;
   --body-bg-color: #000000;
   --body-font-color: #ffffff;
   --body-font: 'Avantt TRIAL', sans-serif;
 
   //MEASUREMENTS
   --px4: 0.25em;
+  --px10: 0.625em;
   --px14: 0.875em;
   --px18: 1.125em;
   --px20: 1.25em;
   --px24: 1.5em;
   --px25: 1.5625em;
+  --px26: 1.625em;
+  --px28: 1.75em;
   --px30: 1.875em;
   --px40: 2.5em;
   --px42: 2.625em;
+  --px50: 3.125em;
   --px62: 3.875em;
   --px80: 5em;
   --px160: 10em;
-
 
   //CONTAINERS
   --container-lg: calc(100% - var(--px40));
@@ -36,6 +39,26 @@
 
 @media (max-width: 991.98px) {
   :root{
-    --header-height: 73px;
+    --body-font-size: 14px;
+    --header-height: 5.214em; //73px
+
+    //MEASUREMENTS
+    --px4: 0.2857em;
+    --px10: 0.714em;
+    --px14: 1em;
+    --px16: 1.142em;
+    --px18: 1.285em;
+    --px20: 1.428em;
+    --px24: 1.714em;
+    --px25: 1.785em;
+    --px26: 1.857em;
+    --px28: 2em;
+    --px30: 2.142em;
+    --px40: 2.857em;
+    --px42: 3em;
+    --px50: 3.571em;
+    --px62: 4.428em;
+    --px80: 5.714em;
+    --px160: 11.428em;
   }
 }
