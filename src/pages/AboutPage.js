@@ -1,16 +1,12 @@
 import React from 'react';
 import clsx from "clsx";
-import {useIsMobileBreakpoint} from "../hooks/useIsMobileBreakpoint";
 import PageLayout from "../layouts/pageLayout";
 import {aboutAccordion, aboutTeam} from "../landingPagesMock";
-// import HeroBg from "../assets/images/faq-hero-bg.webp";
-// import HeroBgMobile from "../assets/images/faq-hero-bg-mobile.webp";
 import AboutPageTeamCard from "../components/AboutPageTeamCard";
 import Accordion from "../components/common/Accordion";
 import styles from "../styles/AboutPage.module.scss";
 
 function AboutPage() {
-	const isMobileBreakpoint = useIsMobileBreakpoint();
 
 	return (
 		<PageLayout

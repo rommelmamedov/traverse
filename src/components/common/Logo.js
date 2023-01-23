@@ -1,10 +1,10 @@
 import React  from 'react';
 import clsx from "clsx";
 import {Link} from "react-router-dom";
+import {useIsMobileBreakpoint} from "../../hooks/useIsMobileBreakpoint";
 import LogoLight from "../../assets/logos/traverse-logo.png";
 import LogoDark from "../../assets/logos/traverse-logo-dark.png"
 import styles from '../../styles/Logo.module.scss';
-import {useIsMobileBreakpoint} from "../../hooks/useIsMobileBreakpoint";
 
 function Logo({extraClass}) {
   const isMobileBreakpoint = useIsMobileBreakpoint();

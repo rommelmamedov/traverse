@@ -4,9 +4,9 @@ import {useIsMobileBreakpoint} from "../hooks/useIsMobileBreakpoint";
 import PageLayout from "../layouts/pageLayout";
 import Button from "../components/common/Button";
 import HomePageSectionTabs from "../components/HomePageSectionTabs";
+import SectionSignUp from "../components/SectionSignUp";
 import SectionHomeMobileImage from "../assets/images/home-header-mobile.webp";
 import styles from "../styles/HomePage.module.scss";
-import SectionSignUp from "../components/SectionSignUp";
 
 function HomePage() {
 	const isMobileBreakpoint = useIsMobileBreakpoint();

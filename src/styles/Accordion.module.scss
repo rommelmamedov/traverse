@@ -103,9 +103,15 @@
       height: 100%;
       padding: 0 0 var(--px40);
 
-      p {
+      p, ul, a, span, em, strong, i {
         font-size: var(--px18);
         line-height: 1.222em; //22px
+      }
+
+      ul {
+        margin: 0 0 1em;
+        padding-left: 1em;
+        list-style: initial;
       }
     }
 

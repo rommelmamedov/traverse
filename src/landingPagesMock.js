@@ -41,48 +41,55 @@ export const walletManagementAccordion = [
   {
     title: "Where are frozen/business assets held?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
-  },
-  {
-    title: "How are Business Wallets secured?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>In your own smart contract, out of our reach. Smart contract code is continuously audited by a third party company.</p>"
   },
   {
     title: "Does on-chain 2FA mean that Traverse can move your funds?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>No.</p>"
   },
   {
     title: "What if I don’t trust Traverse in handling 2FA approvals?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>You can disable 2FA when creating your vault, however this makes your assets vulnerable to malicious contracts that can potentially unfreeze and move tokens on your behalf.</p>"
   },
   {
     title: "Which wallets are supported on Traverse?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<ul>" +
+      "<li>Meta Mask</li>" +
+      "<li>Coinbase Wallet</li>" +
+      "<li>Rainbow Wallet</li>" +
+      "<li>WalletConnect</li>" +
+      "<li>Trust Wallet</li>" +
+      "<li>Argent Wallet</li>" +
+      "<li>Ledger Live</li>" +
+      "<li>More to come...</li>" +
+      "</ul>"
   },
   {
     title: "How much does it cost to create a Vault?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>One time fee = gas fee + $2.5</p>" +
+      "<p>No other fees associated with maintaining your vault, you just have to pay the relevant gas fees whenever freezing/unfreezing tokens</p>"
   },
   {
     title: "How can I file for a dispute?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>Users deciding to file a dispute need to navigate the transaction history on\n" +
+      "their wallet management dashboard. Under the dispute section, users can note all transactions with a Traverse registered business wallet. Users are able to click on the dispute wallet present next to all applicable transactions, which opens a dispute ticket.</p>"
   },
   {
     title: "What is the Approval Manager?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>Users can note all relevant approvals for all their digital assets in\n" +
+      "Traverse’s approval manager. Each asset notes the approvals next to it, and users are able to revoke any approvals as desired.</p>"
   },
 ]
 
 export const businessSolutionsFeatureCards= [
   {
-    title: "Crypto Payments",
+    title: "Cryptocurrency Payments",
     description: "Traverse allows any business to start accepting Ethereum Tokens as easy as a web embed.",
     icon: <IcnCryptoPayments/>
   },
@@ -97,7 +104,7 @@ export const businessSolutionsFeatureCards= [
     icon: <IcnBusinessAnalytics/>
   },
   {
-    title: "Client Management",
+    title: "Customer Management",
     description: "Customer relationships are hard to manage, and they can be even harder to track over web3. Traverse introduces a comprehensive dashboard to allow businesses to track sales, invoices, and customer disputes in one place.",
     icon: <IcnClientManagement/>
   },
@@ -117,32 +124,36 @@ export const businessSolutionsAccordion = [
   {
     title: "As a business, why should I use the Traverse platform?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>Traverse allows businesses to accept and manage their crypto holdings\n" +
+      "without having to worry about handling customer disputes. Businesses can now set up a Business Wallet and start accepting cryptocurrency at the click of a button. We also help businesses with preparing necessary documents to estimate sales and costs in fiat value.</p>"
   },
   {
     title: "How are Business Wallets secured?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>On chain, a Business Wallet is a smart contract deployed and owned by its creator. All holdings are held in the wallet, where the management of assets (such as withdrawals, transfers, swaps) are performed by the authorized wallets, as managed by the wallet owner.</p>"
   },
   {
     title: "What is a Signer and how can I add one?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>A Business Wallet owner can manage wallet access and spending limits\n" +
+      "for their business under the Access Management section in their dashboard.</p>"
   },
   {
     title: "How are spending limits imposed?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>Each signer attached to a business wallet has their own signature key, and\n" +
+      "a signer uses this key to verify the transaction. For example, assuming John is a signer on Walmart’s Business Wallet with the authorization to transact up to $20,000 on a weekly basis. If John exceeds his spending limit or uses the incorrect wallet, the transaction will fail.</p>"
   },
   {
     title: "What is the Business Analytics segment for Business Wallets?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>Traverse provides business analytics to our business wallet users. The\n" +
+      "business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
   },
   {
     title: "Does Traverse charge a fee for handling Business Transactions?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>"
+      "<p>Yes, but we will not start collection fees until...</p>"
   },
 ]
 
@@ -196,18 +207,18 @@ export const aboutTeam = [
     link: "abdulrahman@traverselabs.xyz",
     url: "mailto:abdulrahman@traverselabs.xyz"
   },
-   {
-     name: "Kareem Fakhuri",
-     title:"",
-     link: "kareem@traverselabs.xyz",
-     url: "mailto:kareem@traverselabs.xyz"
-   },
-   {
-     name: "Mohammad Dweik",
-     title: "",
-     link: "moe@traverselabs.xyz",
-     url: "mailto:moe@traverselabs.xyz"
-   }
+  {
+    name: "Kareem Fakhuri",
+    title:"Co-Founder and CEO",
+    link: "kareem@traverselabs.xyz",
+    url: "mailto:kareem@traverselabs.xyz"
+  },
+  {
+    name: "Mohammad Dweik",
+    title: "Co-Founder, CTO, and Head of Cybersecurity",
+    link: "moe@traverselabs.xyz",
+    url: "mailto:moe@traverselabs.xyz"
+  }
 ]
 
 export const aboutAccordion = [

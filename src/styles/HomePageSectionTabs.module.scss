@@ -105,37 +105,6 @@
           flex: 0 0 calc(50% - var(--px20) / 2);
         }
       }
-
-      .featureCard {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        padding: var(--px25) var(--px30);
-        background-color: var(--glass-white-8);
-        border-radius: 1em;
-        backdrop-filter: blur(var(--px40));
-
-        .featureCardTitle {
-          font-weight: 500;
-        }
-
-        .featureCardDescription {
-          line-height: var(--px20);
-          padding-bottom: 2.875em; //46px
-        }
-
-        .featureCardFooter {
-          margin-top: auto;
-        }
-
-        .featureCardIconWrapper {
-          display: flex;
-          align-items: center;
-          width: var(--px50);
-          height: var(--px50);
-        }
-      }
     }
 
     .sectionFaqsTitle {
@@ -194,26 +163,6 @@
 
           &:nth-child(n+6) {
             flex: 0 0 calc(50% - var(--px20) / 2);
-          }
-        }
-
-        .featureCard {
-          padding: var(--px20);
-          border-radius: var(--px16);
-          backdrop-filter: blur(var(--px10));
-
-          .featureCardDescription {
-            line-height: var(--px20);
-            padding-bottom: 3.285em; //46px
-          }
-
-          .featureCardFooter {
-            margin-top: auto;
-          }
-
-          .featureCardIconWrapper {
-            width: var(--px40);
-            height: var(--px40);
           }
         }
       }

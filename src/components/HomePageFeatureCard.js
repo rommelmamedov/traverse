@@ -1,9 +1,10 @@
 import React from 'react';
 import clsx from "clsx";
+import styles from "../styles/HomePageFeatureCard.module.scss"
 
 function HomePageFeatureCard({extraClass, title, description, icon}) {
   return (
-    <article className={clsx("featureCard", extraClass && extraClass)}>
+    <article className={clsx(styles.featureCard, "featureCard", extraClass && extraClass)}>
 
       <h3 className="featureCardTitle">{title}</h3>
 

@@ -5,7 +5,6 @@ import PageLayout from "../layouts/pageLayout";
 import {generalFaqAccordion} from "../landingPagesMock";
 import Accordion from "../components/common/Accordion";
 import SectionSignUp from "../components/SectionSignUp";
-import Button from "../components/common/Button";
 import HeroBg from "../assets/images/faq-hero-bg.webp";
 import HeroBgMobile from "../assets/images/faq-hero-bg-mobile.webp";
 import styles from "../styles/FaqPage.module.scss";
@@ -21,7 +20,9 @@ function FaqPage() {
 		>
 
 			<section className="sectionFaq">
+
 				<div className="container">
+
 					<h1 className="sectionFaqTitle">
 						Traverse Labs prides itself on being transparent, especially when it comes to your crypto and asset management
 					</h1>
@@ -31,6 +32,7 @@ function FaqPage() {
 					</h2>
 
 					<Accordion list={generalFaqAccordion}/>
+
 				</div>
 
 			</section>
@@ -47,9 +49,25 @@ function FaqPage() {
 					<div className="container">
 
 						<div className="sectionFaqHeroText">
-							<h2 className="sectionFaqHeroTitle h1">Have unanswered questions?</h2>
-							<h3 className="sectionFaqHeroSubtitle">Our team is on standby, get in touch with us today!</h3>
-							<Button text="Contact Traverse"/>
+
+							<h2 className="sectionFaqHeroTitle h1">
+								Have unanswered questions?
+							</h2>
+
+							<h3 className="sectionFaqHeroSubtitle">
+								Our team is on standby, get in touch with us today!
+							</h3>
+
+							<a
+								className="button"
+								href="mailto:contact@traverselabs.xyz"
+								rel="noreferrer"
+								target="_blank"
+								title="Contact Traverse"
+							>
+								Contact Traverse
+							</a>
+
 						</div>
 
 					</div>
@@ -59,6 +77,7 @@ function FaqPage() {
 			</section>
 
 			<SectionSignUp/>
+
 		</PageLayout>
 	)
 }

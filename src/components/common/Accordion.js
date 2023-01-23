@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import DOMPurify from 'dompurify';
 import clsx from "clsx";
+import {useOnClickOutside} from "usehooks-ts";
 import Button from "./Button";
 import {ReactComponent as IcnAccordion} from "../../assets/icons/icn-plus.svg";
 import styles from "../../styles/Accordion.module.scss";
 
 function Accordion({extraClass, list }) {
+  const accordionRef = useRef(null);
   const [accordionOpen, setAccordionOpen] = useState(-1);
 
   const handleAccordionOpen = (index) => {
@@ -16,8 +18,14 @@ function Accordion({extraClass, list }) {
     }
   };
 
+  const handleCloseAccordion = useCallback(() => setAccordionOpen(-1), []);
+  useOnClickOutside(accordionRef, handleCloseAccordion);
+
   return (
-    <ul className={clsx(styles.accordion, "accordion", extraClass && extraClass)}>
+    <ul
+      ref={accordionRef}
+      className={clsx(styles.accordion, "accordion", extraClass && extraClass)}
+    >
 
       {list && list?.map((item, idx) => {
         const ItemContent = DOMPurify.sanitize(item.content);
@@ -30,7 +38,7 @@ function Accordion({extraClass, list }) {
               aria-expanded={accordionOpen === idx}
               aria-controls={`${item.title}`}
               aria-disabled={accordionOpen === idx}
-              onClick={(e) => handleAccordionOpen(idx)}
+              onClick={() => handleAccordionOpen(idx)}
             >
 
               <span className="accordionToggleText">
@@ -45,9 +53,10 @@ function Accordion({extraClass, list }) {
 
             <div className={clsx("accordionContent", accordionOpen === idx && "isOpen")}>
 
-              <div className="accordionContentWrapper">
-                <div dangerouslySetInnerHTML={{ __html: ItemContent }}/>
-              </div>
+              <div
+                className="accordionContentWrapper"
+                dangerouslySetInnerHTML={{ __html: ItemContent }}
+              />
 
             </div>
 
