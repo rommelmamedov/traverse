@@ -23,8 +23,10 @@ function AboutPage() {
 			<section className="sectionAbout">
 				<div className="container">
 					<h1 className="sectionAboutTitle">
-
+							At Traverse Labs, we build applications that unlock new capabilities for blockchain users to manage and interact with their holdings. We are currently developing our first product: the Traverse Dashboard
 					</h1>
+
+
 
 				</div>
 			</section>
