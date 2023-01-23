@@ -1,26 +1,31 @@
 import React  from 'react';
 import clsx from "clsx";
-import {Link} from "react-router-dom";
-import LogoLight from "../../assets/logos/traverse-logo.png";
-import LogoDark from "../../assets/logos/traverse-logo-dark.png"
-import styles from '../../styles/Logo.module.scss';
-import {useIsMobileBreakpoint} from "../../hooks/useIsMobileBreakpoint";
+import styles from '../styles/AboutTeamCard.module.scss';
 
-function AboutPageTeamCard({image, name, title, link, linkUrl}) {
-  const isMobileBreakpoint = useIsMobileBreakpoint();
+function AboutPageTeamCard({image, name, title, link, linkUrl, extraClass}) {
+
   return (
-    <article className="teamCard">
+    <article className={clsx(styles.teamCard, "teamCard", extraClass && extraClass)}>
       <div className="teamCardImageWrapper">
         <img src={image} alt={name}/>
       </div>
 
-      <h3>{name}</h3>
+      <h3 className="teamCardTitle">{name}</h3>
 
       <div className="teamCardFooter">
         {title && title}<br/>
         {link &&
         <span>
-          Email: <a href={linkUrl} rel="noopener" target="_blank" title={link}>{link}</a>
+          Email:&nbsp;
+          <a
+            className="teamCardLink"
+            href={linkUrl}
+            rel="noreferrer"
+            target="_blank"
+            title={link}
+          >
+            {link}
+          </a>
         </span>
         }
       </div>

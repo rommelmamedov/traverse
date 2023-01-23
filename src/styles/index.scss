@@ -116,6 +116,13 @@ svg {
 }
 
 //HELPERS
+
+.imgFluid {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .buttonContainer {
   display: flex;
   align-items: center;

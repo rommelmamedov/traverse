@@ -1,0 +1,92 @@
+.aboutPage {
+  padding-top: var(--header-height);
+
+  :global {
+    .sectionAboutTeam {
+      margin-bottom: var(--px160);
+      padding: var(--px160) var(--px20) 0;
+      background-image: url("../assets/images/about-header-bg.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top right;
+
+      .sectionAboutTitle {
+        margin-bottom:  2.58em; //160px
+        text-align: center;
+      }
+
+      .sectionAboutTeamTitle {
+        margin-bottom: 1.904em; //80px
+        text-align: center;
+      }
+
+      .teamCardList {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--px30);
+        width: 100%;
+
+        >li {
+          flex: 0 0 calc(50% - var(--px30) / 2);
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    }
+
+    .sectionAboutAccordion {
+      padding: 0 var(--px20);
+
+      .sectionAboutAccordionTitle {
+        margin-bottom: 80px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .sectionAboutTeam {
+        margin-bottom: var(--px80);
+        padding-top: var(--px40);
+        background-image: url("../assets/images/about-header-bg-mobile.webp");
+
+        .sectionAboutTitle {
+          margin-bottom: 2.857em; //80px
+        }
+
+        .sectionAboutTeamTitle {
+          margin-bottom: 1.818em; //40px
+        }
+
+        .teamCardList {
+          gap: var(--px20);
+
+          > li {
+            flex: 0 0 calc(50% - var(--px30) / 2);
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .sectionAboutAccordion .sectionAboutAccordionTitle {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .sectionAboutTeam .teamCardList {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        > li {
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}
