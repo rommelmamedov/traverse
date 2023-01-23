@@ -14,11 +14,11 @@
 
     .sectionFaqTitle {
       text-align: center;
-      margin-bottom: 294px;
+      margin-bottom: 4.741em;//294px
     }
 
     .sectionFaqAccordionTitle {
-      margin-bottom: 40px;
+      margin-bottom: 1.90em; //80px
       text-align: center;
     }
 
@@ -27,7 +27,7 @@
       display: flex;
       align-items: center;
       height: auto;
-      min-height: 816px;
+      min-height: 51em; //816px
       margin-bottom: var(--px160);
       padding: 0 var(--px20);
 

@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from "clsx";
 import {NavLink} from "react-router-dom";
 
-function NavItems({extraClass, navItemList}) {
+function NavItems({extraClass, navItemList, isExternalLink}) {
   return (
 
     <ul className={clsx( "navbarNav", extraClass && extraClass)}>
