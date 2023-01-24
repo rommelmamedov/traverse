@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from "clsx";
+import { useField} from 'formik';
 
 function CustomInput(
   {
@@ -7,20 +8,18 @@ function CustomInput(
     removeMarginBottom,
     type,
     id,
-    name,
-    placeholder,
-    disabled,
     hideLabel,
     labelText,
     ...props
   }) {
-
+  const [field, meta] = useField(props);
   return (
     <div
       className={clsx(
         "formGroup",
         removeMarginBottom && "noMarginBottom",
         type=== "textarea" && "isTextArea",
+        meta.touched && meta.error && "invalid",
         extraClass && extraClass)
       }
     >
@@ -32,24 +31,23 @@ function CustomInput(
         {labelText}
       </label>
 
-        {type === "textarea" ? (
-          <textarea
-            name={name}
-            id={id}
-            placeholder={placeholder}
-            disabled={disabled}
-            {...props}
-          />
-        ):(
-          <input
-            type={type ? type : "text"}
-            id={id}
-            name={name}
-            placeholder={placeholder}
-            disabled={disabled}
-            {...props}
-          />
-        )}
+      {type === "textarea" ? (
+        <textarea
+          id={id}
+          {...field}
+          {...props}
+        />
+      ):(
+        <input
+          id={id}
+          type={type? type : "text"}
+          {...field}
+          {...props}
+        />
+      )}
+      {meta.touched && meta.error ? (
+        <div className="formGroupError">{meta.error}</div>
+      ) : null}
 
     </div>
   )

@@ -3,7 +3,7 @@ form {
 
   &.formInline {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1em;
 
     @media (max-width: 991.98px) {
@@ -32,6 +32,17 @@ form {
   &.noMarginBottom {
     margin-bottom: 0;
   }
+
+  &.invalid {
+    > input, >textarea {
+      border-color: red;
+      box-shadow: 0 0 5px red;
+    }
+  }
+}
+
+.formGroupError {
+  margin-top: 0.5em;
 }
 
 input,

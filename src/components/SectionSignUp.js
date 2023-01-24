@@ -1,10 +1,11 @@
 import React  from 'react';
 import clsx from "clsx";
-import OverlayBg from "../assets/images/section-signup-bg.svg";
-import OverlayBgOrange from "../assets/images/section-signup-bg-orange.svg";
-import styles from "../styles/SectionSignUp.module.scss";
+import { Form, Formik } from 'formik';
+import * as Yup from 'yup';
 import CustomInput from "./form-elements/CustomInput";
 import Button from "./common/Button";
+import styles from "../styles/SectionSignUp.module.scss";
+
 
 function SectionSignUp({extraClass, isOrange}) {
   return (
@@ -24,27 +25,42 @@ function SectionSignUp({extraClass, isOrange}) {
               Users can note all relevant approvals for all their digital assets in Traverse’s approval manager. Each asset notes the approvals next to it, and users are able to revoke any approvals as desired.
             </p>
 
-            <form action="" className="formInline">
-              <CustomInput
-                hideLabel
-                removeMarginBottom
-                id="id_email_address"
-                name="email_address"
-                labelText="Email Address"
-                placeholder="Email address"
-              />
+            <Formik
+              initialValues={{
+                email_address: '',
+              }}
+              validationSchema={Yup.object().shape({
+                email_address: Yup.string().email('Please enter a valid email address').required('Required'),
+              })}
+              onSubmit={values => {
+                setTimeout(() => {
+                  alert(JSON.stringify(values, null, 2));
+                }, 500);
+              }}
+              render={({ isSubmitting, handleReset }) => (
+                <Form className="formInline">
 
-              <Button type="submit" variantColor="white" text="Subscribe"/>
+                  <CustomInput
+                    hideLabel
+                    removeMarginBottom
+                    type="email"
+                    id="id_email_address"
+                    name="email_address"
+                    labelText="Email Address"
+                    placeholder="Email address"
+                  />
 
-            </form>
+                  <Button
+                    type="submit"
+                    variantColor="white"
+                    text="Subscribe"
+                  />
+
+                </Form>
+              )}
+            />
 
           </div>
-
-          {isOrange? (
-            <img className="sectionSignUpFormBgOverlay" src={OverlayBgOrange} alt="Background"/>
-          ):(
-            <img className="sectionSignUpFormBgOverlay" src={OverlayBg} alt="Background"/>
-          )}
 
         </div>
 
