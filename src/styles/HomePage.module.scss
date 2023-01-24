@@ -74,18 +74,18 @@
         width: 100%;
 
         .sectionHeading {
-          max-width: 269px; //269px
+          max-width: 19.214em; //269px
           margin-bottom: var(--px26);
           font-size: 1em;
         }
 
         h1 {
-          margin-bottom: 26px;
+          margin-bottom: 0.928em; //26px
         }
 
         .sectionSubtitle {
-          font-size: 16px;
-          margin-bottom: 26px;
+          font-size: var(--px16);
+          margin-bottom: 1.625em; //26px
         }
 
         .button {
