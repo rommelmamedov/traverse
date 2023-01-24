@@ -18,8 +18,6 @@ function HomePageSectionTabs() {
   return (
     <section className={clsx(styles.homePageTabs)}>
 
-      <div className="homePageTabsBg"/>
-
       <div className="container">
 
         <ul className="customTabs tabNav">
@@ -45,6 +43,8 @@ function HomePageSectionTabs() {
           }
         })}
       </div>
+
+      <div className="homePageTabsBg"/>
 
     </section>
   )
