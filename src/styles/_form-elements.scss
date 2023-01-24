@@ -64,7 +64,8 @@ textarea {
   padding: 1.241em 1.444em; //22.35px 26px
   background-color: var(--glass-white-8);
   border: 1px solid var(--glass-white-2);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(var(--px40));
+  -webkit-backdrop-filter: blur(var(--px40));
   border-radius: 0.222em; //4px
   font-size: var(--px18);
 

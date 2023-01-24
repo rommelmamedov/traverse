@@ -7,6 +7,7 @@
   background-color: var(--glass-white-8);
   border-radius: 1em;
   backdrop-filter: blur(var(--px40));
+  -webkit-backdrop-filter: blur(var(--px40));
 
   @media (max-width: 991.98px) {
     padding: var(--px20);

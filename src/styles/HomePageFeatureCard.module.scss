@@ -1,6 +1,7 @@
 .featureCard {
   display: flex;
   flex-direction: column;
+  transform: translate3d(0,0,0);
 }
 
 :global {
@@ -11,6 +12,7 @@
     background-color: var(--glass-white-8);
     border-radius: 1em;
     backdrop-filter: blur(var(--px40));
+    -webkit-backdrop-filter: blur(var(--px40));
   }
 
   .featureCardTitle {
@@ -38,6 +40,7 @@
       padding: var(--px20);
       border-radius: var(--px16);
       backdrop-filter: blur(var(--px10));
+      -webkit-backdrop-filter: blur(var(--px10));
 
       .featureCardDescription {
         line-height: var(--px20);
