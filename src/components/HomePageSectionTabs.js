@@ -44,7 +44,7 @@ function HomePageSectionTabs() {
         })}
       </div>
 
-      <div className="homePageTabsBg"/>
+      <div className="homePageTabsBg animateHomeFeatureBg"/>
 
     </section>
   )

@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import clsx from "clsx";
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
@@ -8,12 +8,15 @@ import styles from "../styles/SectionSignUp.module.scss";
 
 
 function SectionSignUp({extraClass, isOrange}) {
+
   return (
     <section className={clsx(styles.sectionSignUp, "sectionSignUp", extraClass && extraClass)}>
 
       <div className="container">
 
         <div className={clsx("sectionSignUpFormWrapper", isOrange && "isOrange")}>
+
+          <div className="sectionSignUpBg animateHomeSignupImg"/>
 
           <div className="sectionSignUpFormInner">
 

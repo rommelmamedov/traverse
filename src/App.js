@@ -1,12 +1,12 @@
-import React, {Suspense, useEffect} from 'react';
+import React, {Suspense} from 'react';
 import { Routes } from './Routes';
-import AOS from "aos";
+//import AOS from "aos";
 
 function App() {
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  // }, []);
 
   return (
     <div className="App">

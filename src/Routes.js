@@ -1,25 +1,21 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Routes as AppRoutes, Route, BrowserRouter } from 'react-router-dom';
 
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import FaqPage from "./pages/FaqPage";
-import Error404 from "./pages/Error404";
+import ScrollToTop from "./components/ScrollToTop";
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import FaqPage from './pages/FaqPage';
+import Error404 from './pages/Error404';
 
-const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <HomePage/>,
-		errorElement: <Error404 />,
-	},
-	{
-		path: 'about',
-		element: <AboutPage />,
-	},
-	{
-		path: 'faq',
-		element: <FaqPage />,
-	},
-]);
-
-export const Routes = () => <RouterProvider router={router} />;
+export const Routes = () => {
+	return (
+		<BrowserRouter>
+			<ScrollToTop />
+			<AppRoutes>
+				<Route exact path="/" element={<HomePage />} />
+				<Route path="/about" element={<AboutPage />} />
+				<Route path="/faq" element={<FaqPage />} />
+				<Route path="*" element={<Error404 />} />
+			</AppRoutes>
+		</BrowserRouter>
+	);
+};

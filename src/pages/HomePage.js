@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import clsx from "clsx";
+import Rellax from "rellax";
 import {useIsMobileBreakpoint} from "../hooks/useIsMobileBreakpoint";
 import PageLayout from "../layouts/pageLayout";
 import Button from "../components/common/Button";
@@ -11,6 +12,20 @@ import styles from "../styles/HomePage.module.scss";
 function HomePage() {
 	const isMobileBreakpoint = useIsMobileBreakpoint();
 
+	useEffect(() => {
+		new Rellax(".animateHomeHeaderBg", { // <---- Via class name
+			speed: 3,
+			vertical: true,
+			horizontal: false
+		});
+
+		new Rellax(".animateHomeFeatureBg", { // <---- Via class name
+			speed: 3,
+			vertical: true,
+			horizontal: false
+		});
+	}, []);
+
 	return (
 		<PageLayout
 			pageTitle="Home"
@@ -20,7 +35,7 @@ function HomePage() {
 
 			<section className="homePageSectionHeader">
 				{!isMobileBreakpoint &&
-				<div className="homePageHeaderBg"/>
+				<div className="homePageHeaderBg animateHomeHeaderBg"/>
 				}
 
 				<div className="container">
@@ -37,7 +52,14 @@ function HomePage() {
 							</h1>
 
 							<p className="sectionSubtitle">
-								We have a live demo. <a href="www.google.com" target="_blank" className="sectionLink">Check it out</a>
+								We have a live demo.&nbsp;
+								<a
+									href="www.google.com"
+									rel="noreferrer"
+									target="_blank"
+									className="sectionLink"
+								>Check it out
+								</a>
 							</p>
 
 							<Button text="Launch the App"/>
