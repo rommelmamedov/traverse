@@ -20,8 +20,6 @@
       background-size: contain;
       background-position: left 0;
       aspect-ratio: 1920/ 1227;
-      transform: translate3d(0,0,0);
-      -webkit-transform:translate3d(0,0,0);
     }
 
     .sectionTab {
@@ -108,15 +106,19 @@
 
       .featureCardsItem {
         width: 100%;
-        flex: 0 0 calc(100% / 4 - var(--px20) * 3 / 4);
 
-        &:nth-child(n+5) {
-          flex-grow: 1;
-          flex-basis: calc(50% - var(--px20) / 2);
+        &:not(:nth-child(5n)),
+        &:not(:nth-child(6n)) {
+          flex: 0 0 calc(100% / 4 - var(--px20) * 3 / 4);
         }
 
-        &:nth-child(n+6) {
-          flex: 0 0 calc(50% - var(--px20) / 2);
+        &:nth-child(5n) {
+          flex-grow: 1;
+          flex-basis: calc(50% - var(--px20));
+        }
+
+        &:nth-child(6n) {
+          flex: 1 0 calc(50% - var(--px20));
         }
       }
     }
