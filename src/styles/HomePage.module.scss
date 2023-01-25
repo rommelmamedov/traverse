@@ -1,15 +1,25 @@
 .homePage {
   :global {
     .homePageSectionHeader {
+      position: relative;
       display: flex;
       align-items: center;
       height: auto;
       min-height: 100vh;
       padding: 0 var(--px20);
+    }
+
+    .homePageHeaderBg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      width: 100%;
+      padding-top: var(--bg-ratio);
       background-image: url("../assets/images/home-header.webp");
       background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right center;
+      background-size: cover;
+      background-position: center center;
     }
 
     .homePageSectionHeaderWrapper {

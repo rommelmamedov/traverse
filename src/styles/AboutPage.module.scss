@@ -3,15 +3,25 @@
 
   :global {
     .sectionAboutTeam {
+      position: relative;
       margin-bottom: var(--px160);
       padding: var(--px160) var(--px20) 0;
-      background-image: url("../assets/images/about-header-bg.webp");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: top right;
+
+      .sectionAboutBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        width: 100%;
+        padding-top: var(--bg-ratio);
+        background-image: url("../assets/images/about-header-bg.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top right;
+      }
 
       .sectionAboutTitle {
-        margin-bottom:  2.58em; //160px
+        margin-bottom: 2.58em; //160px
         text-align: center;
       }
 
@@ -41,7 +51,7 @@
       padding: 0 var(--px20);
 
       .sectionAboutAccordionTitle {
-        margin-bottom: 80px;
+        margin-bottom: 1.904em; //80px
         text-align: center;
       }
     }
@@ -50,7 +60,12 @@
       .sectionAboutTeam {
         margin-bottom: var(--px80);
         padding-top: var(--px40);
-        background-image: url("../assets/images/about-header-bg-mobile.webp");
+
+        .sectionAboutBg {
+          background-image: url("../assets/images/about-header-bg-mobile.webp");
+          background-size: cover;
+          background-position: center center;
+        }
 
         .sectionAboutTitle {
           margin-bottom: 2.857em; //80px
@@ -72,7 +87,7 @@
       }
 
       .sectionAboutAccordion .sectionAboutAccordionTitle {
-        margin-bottom: 40px;
+        margin-bottom: 1.818em; //40px
         text-align: center;
       }
     }

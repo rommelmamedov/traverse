@@ -17,6 +17,8 @@ function AboutPage() {
 
 			<section className="sectionAboutTeam">
 
+				<div className="sectionAboutBg"/>
+
 				<div className="container">
 
 					<h1 className="sectionAboutTitle">

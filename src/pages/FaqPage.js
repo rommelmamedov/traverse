@@ -21,6 +21,8 @@ function FaqPage() {
 
 			<section className="sectionFaq">
 
+				<div className="sectionFaqBg"/>
+
 				<div className="container">
 
 					<h1 className="sectionFaqTitle">

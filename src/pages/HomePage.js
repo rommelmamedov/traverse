@@ -19,6 +19,9 @@ function HomePage() {
 		>
 
 			<section className="homePageSectionHeader">
+				{!isMobileBreakpoint &&
+				<div className="homePageHeaderBg"/>
+				}
 
 				<div className="container">
 

@@ -42,6 +42,7 @@
 
   //ELEMENTS
   --header-height: var(--px80);
+  --bg-ratio: calc(1080 / 1920 * 100%);
 }
 
 @media (min-width: 1920px) {
@@ -59,6 +60,7 @@
 @media (max-width: 991.98px) {
   :root{
     --header-height: 5.214em; //73px
+    --bg-ratio: calc(326 / 320 * 100%);
 
     //MEASUREMENTS
     --px4: 0.2857em;
