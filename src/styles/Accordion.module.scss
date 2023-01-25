@@ -138,7 +138,7 @@
       .accordionContentWrapper {
         padding: 0 0 var(--px30);
 
-        p {
+        p, ul, a, span, em, strong, i {
           font-size: 1em;
           line-height: 1.28; //18px
         }
