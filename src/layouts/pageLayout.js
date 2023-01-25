@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 
-function PageLayout({children, pageClass, pageTitle, isLandingPageFooter}) {
+function PageLayout({children, pageClass, pageTitle, isFullFooter}) {
 
   return (
     <div className={clsx("pageWrapper", pageClass)}>
@@ -15,7 +15,7 @@ function PageLayout({children, pageClass, pageTitle, isLandingPageFooter}) {
       <main>
         {children}
       </main>
-      <Footer isLandingPageFooter={isLandingPageFooter}/>
+      <Footer isFullFooter={isFullFooter}/>
     </div>
   )
 }

@@ -15,7 +15,7 @@ function HomePage() {
 		<PageLayout
 			pageTitle="Home"
 			pageClass={clsx(styles.homePage, "homePage")}
-			isLandingPageFooter
+			isFullFooter
 		>
 
 			<section className="homePageSectionHeader">

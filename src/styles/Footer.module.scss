@@ -25,13 +25,17 @@
 
   :global {
     .sectionFooter {
+      width: 100%;
+      padding: 0 var(--px20);
+      border-top: 1px solid var(--glass-white-2);
+    }
+
+    .sectionFooterInner {
       display: flex;
       align-items: center;
       width: 100%;
       height: var(--px80);
-      padding: 0 var(--px20);
       column-gap: 1em;
-      border-top: 1px solid var(--glass-white-2);
     }
 
     .footerCopyright {
@@ -83,6 +87,10 @@
 
     @media (max-width: 991.98px) {
       .sectionFooter {
+        border-top: 0;
+      }
+
+      .sectionFooterInner {
         width: 100%;
         height: auto;
         flex-direction: column;
@@ -90,6 +98,7 @@
         column-gap: 0;
         row-gap: var(--px20);
         padding: var(--px20);
+        border-top: 1px solid var(--glass-white-2);
       }
 
       .footerCopyright {

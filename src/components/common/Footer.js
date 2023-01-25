@@ -7,14 +7,14 @@ import landingFooterBg from "../../assets/images/footer-landing-page-bg.webp";
 import landingFooterBgMobile from "../../assets/images/footer-landing-page-bg-mobile.webp";
 import styles from '../../styles/Footer.module.scss';
 
-function Footer({isLandingPageFooter}) {
+function Footer({isFullFooter}) {
 
   const isMobileBreakpoint = useIsMobileBreakpoint();
 
   return (
-    <footer className={clsx(styles.footer, "footer", isLandingPageFooter && styles.footerLandingPage)}>
+    <footer className={clsx(styles.footer, "footer", isFullFooter && styles.footerLandingPage)}>
 
-      {isLandingPageFooter &&
+      {isFullFooter &&
       <>
         {isMobileBreakpoint? (
           <img className="footerLandingPageBg" src={landingFooterBgMobile} alt="Footer background"/>
@@ -26,13 +26,17 @@ function Footer({isLandingPageFooter}) {
 
       <section className="sectionFooter">
 
-        <span className="footerCopyright">
-          ©2022 Traverse Labs Inc.
-        </span>
+        <div className="sectionFooterInner">
 
-        <FooterLinks/>
+          <span className="footerCopyright">
+            ©2022 Traverse Labs Inc.
+          </span>
 
-        <FooterSocialLinks/>
+          <FooterLinks/>
+
+          <FooterSocialLinks/>
+
+        </div>
 
       </section>
 

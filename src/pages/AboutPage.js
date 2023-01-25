@@ -12,7 +12,7 @@ function AboutPage() {
 		<PageLayout
 			pageTitle="About"
 			pageClass={clsx(styles.aboutPage, "AboutPage")}
-			isLandingPageFooter
+			isFullFooter
 		>
 
 			<section className="sectionAboutTeam">

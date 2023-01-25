@@ -16,7 +16,7 @@ function FaqPage() {
 		<PageLayout
 			pageTitle="Faq"
 			pageClass={clsx(styles.faqPage, "faqPage")}
-			isLandingPageFooter
+			isFullFooter
 		>
 
 			<section className="sectionFaq">
