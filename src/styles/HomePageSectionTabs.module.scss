@@ -172,36 +172,42 @@
       }
 
       .featureCards {
-        .featureCardsItem:not(:nth-child(5n)),
-        .featureCardsItem:not(:nth-child(6n)),
-        .featureCardsItem:nth-child(5n),
-        .featureCardsItem:nth-child(6n) {
-          flex: 0 0 calc(50% - var(--px20) / 2);
-        }
-        .featureCardsItem:nth-child(5n) {
-          flex-grow: unset;
-        }
-      }
+        .featureCardsItem {
+          &:not(:nth-child(5n)),
+          &:not(:nth-child(6n)) {
+            flex: 0 0 calc(50% - var(--px20) / 2);
+          }
 
-      .sectionFaqsTitle {
-        margin-bottom: 1.818em; //40px
-      }
+          &:nth-child(5n) {
+            flex-grow: 1;
+            flex-basis: calc(50% - var(--px20));
+          }
+
+          &:nth-child(6n) {
+            flex: 1 0 calc(50% - var(--px20));
+          }
+        }
     }
 
-    @media (max-width: 767.98px) {
-      .homePageTabsBg {
-        top: 37%;
-        transform: translate3d(0,-37%,0);
-      }
+    .sectionFaqsTitle {
+      margin-bottom: 1.818em; //40px
+    }
+  }
 
-      .featureCards {
-        .featureCardsItem:not(:nth-child(5n)),
-        .featureCardsItem:not(:nth-child(6n)),
-        .featureCardsItem:nth-child(5n),
-        .featureCardsItem:nth-child(6n) {
-          flex: 0 0 100%;
-        }
+  @media (max-width: 767.98px) {
+    .homePageTabsBg {
+      top: 37%;
+      transform: translate3d(0,-37%,0);
+    }
+
+    .featureCards {
+      .featureCardsItem:not(:nth-child(5n)),
+      .featureCardsItem:not(:nth-child(6n)),
+      .featureCardsItem:nth-child(5n),
+      .featureCardsItem:nth-child(6n) {
+        flex: 0 0 100%;
       }
     }
   }
+}
 }
