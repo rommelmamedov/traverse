@@ -6,7 +6,6 @@ import CustomInput from "./form-elements/CustomInput";
 import Button from "./common/Button";
 import styles from "../styles/SectionSignUp.module.scss";
 
-
 function SectionSignUp({extraClass, isOrange}) {
 
   return (
@@ -16,7 +15,7 @@ function SectionSignUp({extraClass, isOrange}) {
 
         <div className={clsx("sectionSignUpFormWrapper", isOrange && "isOrange")}>
 
-          <div className="sectionSignUpBg animateHomeSignupImg"/>
+          <div className="sectionSignUpBg"/>
 
           <div className="sectionSignUpFormInner">
 

@@ -70,6 +70,10 @@
       @media (max-width: 991.98px) {
         padding: var(--px20);
 
+        .sectionSignUpBg {
+          background-size: auto;
+        }
+
         .sectionSignUpFormInner .sectionSignUpFormSubtitle {
           margin-bottom: var(--px20);
           font-size: var(--px14);

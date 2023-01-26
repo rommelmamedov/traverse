@@ -1,30 +1,12 @@
-import React, { useEffect }  from 'react';
+import React from 'react';
 import clsx from "clsx";
-import Rellax from "rellax";
-import {useIsMobileBreakpoint} from "../hooks/useIsMobileBreakpoint";
 import PageLayout from "../layouts/pageLayout";
 import Button from "../components/common/Button";
 import HomePageSectionTabs from "../components/HomePageSectionTabs";
 import SectionSignUp from "../components/SectionSignUp";
-import SectionHomeMobileImage from "../assets/images/home-header-mobile.webp";
 import styles from "../styles/HomePage.module.scss";
 
 function HomePage() {
-	const isMobileBreakpoint = useIsMobileBreakpoint();
-
-	useEffect(() => {
-		new Rellax(".animateHomeHeaderBg", { // <---- Via class name
-			speed: 3,
-			vertical: true,
-			horizontal: false
-		});
-
-		new Rellax(".animateHomeFeatureBg", { // <---- Via class name
-			speed: 3,
-			vertical: true,
-			horizontal: false
-		});
-	}, []);
 
 	return (
 		<PageLayout
@@ -34,9 +16,6 @@ function HomePage() {
 		>
 
 			<section className="homePageSectionHeader">
-				{!isMobileBreakpoint &&
-				<div className="homePageHeaderBg animateHomeHeaderBg"/>
-				}
 
 				<div className="container">
 
@@ -66,15 +45,11 @@ function HomePage() {
 
 						</div>
 
-						{isMobileBreakpoint &&
-						<div className="homePageSectionHeaderMobileImage">
-							<img src={SectionHomeMobileImage} alt="Header background"/>
-						</div>
-						}
-
 					</div>
 
 				</div>
+
+				<div className="homePageHeaderBg"/>
 
 			</section>
 
