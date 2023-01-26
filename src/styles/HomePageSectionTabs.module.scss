@@ -139,13 +139,10 @@
 
       .customTabs {
         &.tabNav {
-          flex-direction: column;
-          width: 100%;
           margin-bottom: var(--px40);
           font-size: 1em;
 
           li {
-            width: 100%;
 
             &:first-child .tabButton {
               border-radius: var(--px4) var(--px4) 0 0;
@@ -154,10 +151,6 @@
             &:last-child .tabButton {
               border-radius: 0 0 var(--px4) var(--px4);
             }
-          }
-
-          .tabButton {
-            width: 100%;
           }
         }
       }
@@ -187,27 +180,50 @@
             flex: 1 0 calc(50% - var(--px20));
           }
         }
+      }
+
+      .sectionFaqsTitle {
+        margin-bottom: 1.818em; //40px
+      }
     }
 
-    .sectionFaqsTitle {
-      margin-bottom: 1.818em; //40px
-    }
-  }
+    @media (max-width: 767.98px) {
+      .homePageTabsBg {
+        top: 37%;
+        transform: translate3d(0,-37%,0);
+      }
 
-  @media (max-width: 767.98px) {
-    .homePageTabsBg {
-      top: 37%;
-      transform: translate3d(0,-37%,0);
-    }
+      .customTabs {
+        &.tabNav {
+          flex-direction: column;
+          width: 100%;
 
-    .featureCards {
-      .featureCardsItem:not(:nth-child(5n)),
-      .featureCardsItem:not(:nth-child(6n)),
-      .featureCardsItem:nth-child(5n),
-      .featureCardsItem:nth-child(6n) {
-        flex: 0 0 100%;
+          li {
+            width: 100%;
+
+            &:first-child .tabButton {
+              border-radius: var(--px4) var(--px4) 0 0;
+            }
+
+            &:last-child .tabButton {
+              border-radius: 0 0 var(--px4) var(--px4);
+            }
+          }
+
+          .tabButton {
+            width: 100%;
+          }
+        }
+      }
+
+      .featureCards {
+        .featureCardsItem:not(:nth-child(5n)),
+        .featureCardsItem:not(:nth-child(6n)),
+        .featureCardsItem:nth-child(5n),
+        .featureCardsItem:nth-child(6n) {
+          flex: 0 0 100%;
+        }
       }
     }
   }
-}
 }
