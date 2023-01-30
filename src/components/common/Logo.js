@@ -2,8 +2,8 @@ import React  from 'react';
 import clsx from "clsx";
 import {Link} from "react-router-dom";
 import {useIsMobileBreakpoint} from "../../hooks/useIsMobileBreakpoint";
-import LogoLight from "../../assets/logos/traverse-logo.png";
-import LogoDark from "../../assets/logos/traverse-logo-dark.png"
+import LogoLight from "../../assets/logos/traverse-logo.svg";
+import LogoDark from "../../assets/logos/traverse-logo-dark.svg"
 import styles from '../../styles/Logo.module.scss';
 
 function Logo({extraClass}) {
