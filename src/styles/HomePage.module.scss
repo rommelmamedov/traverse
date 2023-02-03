@@ -20,7 +20,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      transform: translate3d(0,-50%,0);
+      transform: translate3d(0, -50%, 0);
     }
 
     .homePageSectionHeaderWrapper {
@@ -37,7 +37,7 @@
     .sectionHeading {
       width: 100%;
       max-width: 50%;
-      margin-bottom: 3.335em;//60px
+      margin-bottom: 3.335em; //60px
       font-size: var(--px18);
       line-height: 1.22; //22px;
     }
@@ -68,7 +68,7 @@
         padding-top: calc(var(--header-height) + var(--px30));
         background-image: none;
 
-        >.container {
+        > .container {
           flex-grow: 1;
           display: flex;
           flex-direction: column;
@@ -108,7 +108,7 @@
 
       .homePageHeaderBg {
         position: static;
-        transform: translate3d(0,0,0);
+        transform: translate3d(0, 0, 0);
         background-image: url("../assets/images/home-header-mobile.webp");
         background-size: contain;
       }

@@ -2,7 +2,7 @@ button,
 .button {
   --button-min-height: 3.554em; //64px
   --button-padding-y: 1.112em; //20px
-  --button-padding-x: 1.112em;//20px
+  --button-padding-x: 1.112em; //20px
   --button-radius: 0.222em; //4px
   --button-bg-color: var(--blue);
   --button-border-color: var(--blue);
@@ -28,7 +28,7 @@ button,
   font-size: var(--button-font-size);
   line-height: normal;
   text-decoration: none;
-  backdrop-filter: blur(5px);//5px
+  backdrop-filter: blur(5px); //5px
   -webkit-backdrop-filter: blur(5px);
   transition: all 0.25s;
   cursor: pointer;
@@ -48,7 +48,7 @@ button,
   &[data-size="sm"] {
     --button-min-height: 2.714em;
     --button-padding-y: 0.714em; //10px
-    --button-padding-x: 1.912em;//26.77px
+    --button-padding-x: 1.912em; //26.77px
     --button-radius: 0.285em; //4px
     --button-font-size: var(--px14);
   }
@@ -63,7 +63,7 @@ button,
   @media (max-width: 991.98px) {
     --button-font-size: 1em;
     --button-padding-y: var(--px10);
-    --button-padding-x: var(--px20);//20px
+    --button-padding-x: var(--px20); //20px
     --button-radius: var(--px4); //4px
     --button-min-height: 2.714em; //38px
 

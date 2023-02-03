@@ -84,7 +84,7 @@
 
       svg {
         max-width: var(--px10);
-        max-height:  var(--px10);
+        max-height: var(--px10);
       }
     }
 
@@ -103,7 +103,13 @@
       height: 100%;
       padding: 0 0 var(--px40);
 
-      p, ul, a, span, em, strong, i {
+      p,
+      ul,
+      a,
+      span,
+      em,
+      strong,
+      i {
         font-size: var(--px18);
         line-height: 1.222em; //22px
       }
@@ -115,7 +121,7 @@
       }
     }
 
-    @media (max-width: 991.98px){
+    @media (max-width: 991.98px) {
       .accordionToggle {
         padding: var(--px20) 0;
       }
@@ -138,7 +144,13 @@
       .accordionContentWrapper {
         padding: 0 0 var(--px30);
 
-        p, ul, a, span, em, strong, i {
+        p,
+        ul,
+        a,
+        span,
+        em,
+        strong,
+        i {
           font-size: 1em;
           line-height: 1.28; //18px
         }

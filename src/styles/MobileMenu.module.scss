@@ -122,13 +122,13 @@
     background-color: var(--light-grey);
     overflow-y: auto;
 
-    >.navItems {
+    > .navItems {
       flex-grow: 1;
     }
   }
 
   .mobileMenuFooter {
     margin-top: auto;
-    padding: var(--px80) var(--px20)  var(--px40);
+    padding: var(--px80) var(--px20) var(--px40);
   }
 }

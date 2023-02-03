@@ -1,13 +1,7 @@
-import React, {Suspense} from 'react';
-import { Routes } from './Routes';
-//import AOS from "aos";
+import React, { Suspense } from "react";
+import { Routes } from "./Routes";
 
 function App() {
-
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
-
   return (
     <div className="App">
       <Suspense fallback="loading">
