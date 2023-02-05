@@ -1,37 +1,37 @@
-.faqPage {
+.contactPage {
   padding-top: var(--header-height);
 
   :global {
-    .sectionFaq {
+    .sectionContact {
       position: relative;
       margin-bottom: var(--px160);
       padding: var(--px160) var(--px20) 0;
     }
 
-    .sectionFaqBg {
+    .sectionContactBg {
       position: absolute;
       top: 0;
       left: 0;
       z-index: -2;
       width: 100%;
       padding-top: var(--bg-ratio);
-      background-image: url("../assets/images/faq-header-bg.webp");
+      background-image: url("../assets/images/contact-header-bg.webp");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: top left;
     }
 
-    .sectionFaqTitle {
+    .sectionContactTitle {
       margin-bottom: 4.741em; //294px
       text-align: center;
     }
 
-    .sectionFaqAccordionTitle {
+    .sectionContactAccordionTitle {
       margin-bottom: 1.904em; //80px
       text-align: center;
     }
 
-    .sectionFaqHero {
+    .sectionContactHero {
       position: relative;
       display: flex;
       align-items: center;
@@ -49,18 +49,18 @@
         transform: translateY(-50%);
       }
 
-      .sectionFaqHeroTextWrapper {
+      .sectionContactHeroTextWrapper {
         width: 100%;
 
-        .sectionFaqHeroText {
+        .sectionContactHeroText {
           max-width: 50%;
         }
 
-        .sectionFaqHeroTitle {
+        .sectionContactHeroTitle {
           margin-bottom: 0.645em; //40px
         }
 
-        .sectionFaqHeroSubtitle {
+        .sectionContactHeroSubtitle {
           max-width: 15.25em; //366px
           margin-bottom: 1.667em; //40px
           font-weight: normal;
@@ -69,23 +69,23 @@
     }
 
     @media (max-width: 991.98px) {
-      .sectionFaq {
+      .sectionContact {
         position: relative;
         margin-bottom: var(--px80);
         padding: var(--px40) var(--px20) 0;
       }
 
-      .sectionFaqBg {
-        background-image: url("../assets/images/faq-header-bg-mobile.webp");
+      .sectionContactBg {
+        background-image: url("../assets/images/contact-header-bg-mobile.webp");
         background-size: cover;
         background-position: center center;
       }
 
-      .sectionFaqTitle {
+      .sectionContactTitle {
         margin-bottom: 2.857em; //80px
       }
 
-      .sectionFaqHero {
+      .sectionContactHero {
         flex-direction: column;
         height: auto;
         min-height: unset;
@@ -97,11 +97,11 @@
           transform: none;
         }
 
-        .sectionFaqHeroTextWrapper {
-          .sectionFaqHeroText {
+        .sectionContactHeroTextWrapper {
+          .sectionContactHeroText {
             max-width: 100%;
           }
-          .sectionFaqHeroSubtitle {
+          .sectionContactHeroSubtitle {
             max-width: 100%;
           }
         }

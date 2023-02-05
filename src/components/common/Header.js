@@ -7,13 +7,9 @@ import NavItems from "./NavItems";
 import styles from "../../styles/Header.module.scss";
 
 const navItemsUnlaunched = [
-  { title: "About Traverse", url: "/about", isExternalLink: false },
-  { title: "General FAQ", url: "/faq", isExternalLink: false },
-  {
-    title: "Get in Touch",
-    url: "mailto:contact@traverselabs.xyz",
-    isExternalLink: true,
-  },
+  { title: "Intro", url: "/", isExternalLink: false },
+  { title: "About", url: "/about", isExternalLink: false },
+  { title: "Get In Touch", url: "/contact", isExternalLink: false },
 ];
 
 function Header({ extraClass }) {

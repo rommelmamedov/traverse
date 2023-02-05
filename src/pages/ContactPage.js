@@ -1,52 +1,46 @@
 import clsx from "clsx";
 import { useIsMobileBreakpoint } from "../hooks/useIsMobileBreakpoint";
 import PageLayout from "../layouts/pageLayout";
-import { generalFaqAccordion } from "../landingPagesMock";
-import Accordion from "../components/common/Accordion";
 import SectionSignUp from "../components/SectionSignUp";
-import HeroBg from "../assets/images/faq-hero-bg.webp";
-import HeroBgMobile from "../assets/images/faq-hero-bg-mobile.webp";
-import styles from "../styles/FaqPage.module.scss";
+import HeroBg from "../assets/images/contact-hero-bg.webp";
+import HeroBgMobile from "../assets/images/contact-hero-bg-mobile.webp";
+import styles from "../styles/ContactPage.module.scss";
 
-function FaqPage() {
+function ContactPage() {
   const isMobileBreakpoint = useIsMobileBreakpoint();
 
   return (
     <PageLayout
-      pageTitle="Faq"
-      pageClass={clsx(styles.faqPage, "faqPage")}
+      pageTitle="Get In Touch"
+      pageClass={clsx(styles.contactPage, "contactPage")}
       isFullFooter
     >
-      <section className="sectionFaq">
-        <div className="sectionFaqBg" />
+      <section className="sectionContact">
+        <div className="sectionContactBg" />
 
         <div className="container">
-          <h1 className="sectionFaqTitle">
+          <h1 className="sectionContactTitle">
             Traverse Labs prides itself on being transparent, especially when it
             comes to your crypto and asset management
           </h1>
-
-          <h2 className="sectionFaqAccordionTitle">General FAQ</h2>
-
-          <Accordion list={generalFaqAccordion} />
         </div>
       </section>
 
-      <section className="sectionFaqHero">
+      <section className="sectionContactHero">
         {isMobileBreakpoint ? (
           <img src={HeroBgMobile} alt="Hero background" />
         ) : (
           <img src={HeroBg} alt="Hero background" />
         )}
 
-        <div className="sectionFaqHeroTextWrapper">
+        <div className="sectionContactHeroTextWrapper">
           <div className="container">
-            <div className="sectionFaqHeroText">
-              <h2 className="sectionFaqHeroTitle h1">
+            <div className="sectionContactHeroText">
+              <h2 className="sectionContactHeroTitle h1">
                 Have unanswered questions?
               </h2>
 
-              <h3 className="sectionFaqHeroSubtitle">
+              <h3 className="sectionContactHeroSubtitle">
                 Our team is on standby, get in touch with us today!
               </h3>
 
@@ -69,4 +63,4 @@ function FaqPage() {
   );
 }
 
-export default FaqPage;
+export default ContactPage;
