@@ -12,9 +12,9 @@
     .homePageHeaderBg {
       position: absolute;
       top: 50%;
-      left: var(--px26);
+      right: 0;
       z-index: -2;
-      width: 100%;
+      width: calc(100% - var(--px80));
       padding-top: var(--bg-ratio);
       background-image: url("../assets/images/home-header.webp");
       background-repeat: no-repeat;
