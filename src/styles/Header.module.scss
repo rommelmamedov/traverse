@@ -31,12 +31,6 @@
   }
 
   .navbarNav {
-    /* Start: Remove once launch app button functional */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    /* End: Remove once launch app button functional */
     display: inline-flex;
     align-items: center;
     column-gap: 5.75em; //92px
@@ -44,6 +38,15 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
+    &.desktop {
+      /* Start: Remove once launch app button functional */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      /* End: Remove once launch app button functional */
+    }
 
     &.mobile {
       display: flex;

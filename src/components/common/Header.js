@@ -37,7 +37,7 @@ function Header({ extraClass }) {
           </MobileMenu>
         ) : (
           <>
-            <NavItems navItemList={navItemsUnlaunched} />
+            <NavItems extraClass="desktop" navItemList={navItemsUnlaunched} />
 
             {/* <Button
               extraClass="navButton"
