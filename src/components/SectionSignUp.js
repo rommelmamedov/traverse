@@ -19,7 +19,7 @@ function SectionSignUp({ extraClass, isOrange }) {
   const handleSubmit = async (values, { resetForm, setValues }) => {
     try {
       const response = await axios.get(
-        `http://api.traverselabs.xyz/waitlist?emailAddress=${values.email_address}`
+        `https://api.traverselabs.xyz/waitlist?emailAddress=${values.email_address}`
       );
 
       if (response.data.success) {
