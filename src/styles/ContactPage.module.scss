@@ -37,17 +37,17 @@
       align-items: center;
       height: auto;
       min-height: 51em; //816px
-      margin-top: 500px;
+      // margin-top: 500px;
       margin-bottom: var(--px160);
       padding: 0 var(--px20);
 
       > img {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 50%;
         z-index: -2;
-        width: 100%;
-        transform: translateY(-50%);
+        width: 70%;
+        transform: translateY(-50%) translateX(-40%);
       }
 
       .sectionContactHeroTextWrapper {

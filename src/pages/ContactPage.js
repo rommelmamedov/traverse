@@ -15,7 +15,7 @@ function ContactPage() {
       pageClass={clsx(styles.contactPage, "contactPage")}
       isFullFooter
     >
-      <section className="sectionContact">
+      {/* <section className="sectionContact">
         <div className="sectionContactBg" />
 
         <div className="container">
@@ -24,7 +24,7 @@ function ContactPage() {
             comes to your crypto and asset management
           </h1>
         </div>
-      </section>
+      </section> */}
 
       <section className="sectionContactHero">
         {isMobileBreakpoint ? (
