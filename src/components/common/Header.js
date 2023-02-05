@@ -32,22 +32,22 @@ function Header({ extraClass }) {
             />
 
             <div className="mobileMenuFooter">
-              <Button
+              {/* <Button
                 extraClass="navButton mobile"
                 text="Launch the app"
                 variantSize="sm"
-              />
+              /> */}
             </div>
           </MobileMenu>
         ) : (
           <>
             <NavItems navItemList={navItemsUnlaunched} />
 
-            <Button
+            {/* <Button
               extraClass="navButton"
               text="Launch the app"
               variantSize="sm"
-            />
+            /> */}
           </>
         )}
       </nav>

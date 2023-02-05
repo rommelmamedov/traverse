@@ -22,7 +22,7 @@ function HomePage() {
 
               <h1>Explore the blockchain with your mind at ease</h1>
 
-              <p className="sectionSubtitle">
+              {/* <p className="sectionSubtitle">
                 We have a live demo.&nbsp;
                 <a
                   href="www.google.com"
@@ -32,9 +32,9 @@ function HomePage() {
                 >
                   Check it out
                 </a>
-              </p>
+              </p> */}
 
-              <Button text="Launch the App" />
+              {/* <Button text="Launch the App" /> */}
             </div>
           </div>
         </div>
