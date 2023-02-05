@@ -193,8 +193,8 @@ export const aboutTeam = [
 
 export const aboutAccordion = [
   {
-    title: "Do you have social media accounts?",
+    title: "Where can I find Traverse on social media?",
     content:
-      "<p>Yes! Scroll down to to the bottom of the page for our official links.</p>",
+      "<p>You can find all our official links at the bottom of any page.</p>",
   },
 ];
