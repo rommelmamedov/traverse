@@ -65,10 +65,10 @@ export const walletManagementAccordion = [
       "<li>Rainbow Wallet</li>" +
       "<li>WalletConnect</li>" +
       "<li>Trust Wallet</li>" +
-      "<li>Argent Wallet</li>" +
+      // "<li>Argent Wallet</li>" +
       "<li>Ledger Live</li>" +
-      "<li>More to come...</li>" +
-      "</ul>",
+      "</ul>" +
+      "<p>More to come...</p>",
   },
   // {
   //   title: "How much does it cost to create a Vault?",
@@ -193,43 +193,8 @@ export const aboutTeam = [
 
 export const aboutAccordion = [
   {
-    title: "Where are frozen/business assets held?",
+    title: "Do you have social media accounts?",
     content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "Can I claim airdrops using my frozen tokens?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "Does on-chain 2FA mean that Traverse can move your funds?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "What if I don’t trust Traverse in handling 2FA approvals?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "Which wallets are supported on Traverse?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "How much does it cost to create a Vault?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "How can I file for a dispute?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
-  },
-  {
-    title: "What is the Approval Manager?",
-    content:
-      "<p>Traverse provides business analytics to our business wallet users. The business analytics serves to track the overall sales made from the business wallet, track the number of transactions made, and provides businesses and merchants the opportunity to routinely and automatically convert their crypto to stablecoins to protect against the volatile nature of cryptocurrency. This segment also tracks the total number of disputes both (open and closed) the business has.</p>",
+      "<p>Yes! Scroll down to to the bottom of the page for our official links.</p>",
   },
 ];
