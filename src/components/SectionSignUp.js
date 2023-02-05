@@ -51,14 +51,8 @@ function SectionSignUp({ extraClass, isOrange }) {
 
           <div className="sectionSignUpFormInner">
             <h2 className="sectionSignUpFormTitle">
-              Sign up for exclusive news & protocol drops
+              Sign up for early access & exclusive news
             </h2>
-
-            <p className="sectionSignUpFormSubtitle">
-              Users can note all relevant approvals for all their digital assets
-              in Traverse’s approval manager. Each asset notes the approvals
-              next to it, and users are able to revoke any approvals as desired.
-            </p>
 
             <Formik
               initialValues={initialValues}
