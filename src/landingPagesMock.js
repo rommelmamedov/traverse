@@ -44,17 +44,18 @@ export const walletManagementAccordion = [
   {
     title: "Where are frozen/business assets held?",
     content:
-      "<p>In your own smart contract, out of our reach. Smart contract code is continuously audited by a third party company.</p>",
+      "<p>In your own vault, out of our reach. Smart contract code is continuously checked by third party auditors.</p>",
   },
   {
-    title: "Does on-chain 2FA mean that Traverse can move your funds?",
-    content: "<p>No.</p>",
-  },
-  {
-    title: "What if I don’t trust Traverse in handling 2FA approvals?",
+    title: "Does on-chain 2FA give Traverse control over my assets?",
     content:
-      "<p>You can disable 2FA when creating your vault, however this makes your assets vulnerable to malicious contracts that can potentially unfreeze and move tokens on your behalf.</p>",
+      "<p>No! We act as a third party who adds an extra security layer to the blockchain.</p>",
   },
+  // {
+  //   title: "What if I don’t trust Traverse in handling 2FA approvals?",
+  //   content:
+  //     "<p>You can disable 2FA when creating your vault, however this makes your assets vulnerable to malicious contracts that can potentially unfreeze and move tokens on your behalf.</p>",
+  // },
   {
     title: "Which wallets are supported on Traverse?",
     content:
@@ -69,14 +70,14 @@ export const walletManagementAccordion = [
       "<li>More to come...</li>" +
       "</ul>",
   },
+  // {
+  //   title: "How much does it cost to create a Vault?",
+  //   content:
+  //     "<p>One time fee = gas fee + $2.5</p>" +
+  //     "<p>No other fees associated with maintaining your vault, you just have to pay the relevant gas fees whenever freezing/unfreezing tokens</p>",
+  // },
   {
-    title: "How much does it cost to create a Vault?",
-    content:
-      "<p>One time fee = gas fee + $2.5</p>" +
-      "<p>No other fees associated with maintaining your vault, you just have to pay the relevant gas fees whenever freezing/unfreezing tokens</p>",
-  },
-  {
-    title: "How can I file for a dispute?",
+    title: "How can I file for a commercial transaction dispute?",
     content:
       "<p>Users deciding to file a dispute need to navigate the transaction history on\n" +
       "their wallet management dashboard. Under the dispute section, users can note all transactions with a Traverse registered business wallet. Users are able to click on the dispute wallet present next to all applicable transactions, which opens a dispute ticket.</p>",
