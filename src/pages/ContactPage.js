@@ -51,7 +51,7 @@ function ContactPage() {
                 target="_blank"
                 title="Contact Traverse"
               >
-                Contact Traverse
+                Contact Us
               </a>
             </div>
           </div>
