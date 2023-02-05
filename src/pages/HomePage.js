@@ -16,9 +16,9 @@ function HomePage() {
         <div className="container">
           <div className="homePageSectionHeaderWrapper">
             <div className="homePageSectionHeaderTextWrapper">
-              <p className="sectionHeading">
+              {/* <p className="sectionHeading">
                 The securest way to manage your portfolio on one platform
-              </p>
+              </p> */}
 
               <h1>Explore the blockchain with your mind at ease</h1>
 
