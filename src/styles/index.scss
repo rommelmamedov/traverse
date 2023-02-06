@@ -24,8 +24,8 @@ body {
   font-size: var(--body-font-size);
   font-family: "Avantt TRIAL", sans-serif;
   line-height: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
 
   &.menuIsOpen {
     overflow: hidden;

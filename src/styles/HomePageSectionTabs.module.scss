@@ -144,11 +144,11 @@
 
           li {
             &:first-child .tabButton {
-              border-radius: var(--px4) var(--px4) 0 0;
+              border-radius: var(--px4) 0 0 var(--px4);
             }
 
             &:last-child .tabButton {
-              border-radius: 0 0 var(--px4) var(--px4);
+              border-radius: 0 var(--px4) var(--px4) 0;
             }
           }
         }
