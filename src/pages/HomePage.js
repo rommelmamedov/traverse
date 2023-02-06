@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import PageLayout from "../layouts/pageLayout";
-import Button from "../components/common/Button";
+//import Button from "../components/common/Button";
 import HomePageSectionTabs from "../components/HomePageSectionTabs";
 import SectionSignUp from "../components/SectionSignUp";
 import styles from "../styles/HomePage.module.scss";

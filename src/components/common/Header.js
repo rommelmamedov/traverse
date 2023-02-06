@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useIsMobileBreakpoint } from "../../hooks/useIsMobileBreakpoint";
 import Logo from "./Logo";
-import Button from "./Button";
+//import Button from "./Button";
 import MobileMenu from "./MobileMenu";
 import NavItems from "./NavItems";
 import styles from "../../styles/Header.module.scss";
